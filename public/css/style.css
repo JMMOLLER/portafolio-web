@@ -9,6 +9,8 @@
 :root {
     --bg-color-main: #F5F5F5;
     --bg-color-baby-blue-eyes: #EAF2FD;
+    --azul-100: #2A7AE4;
+    --white: #FFFFFF;
 }
 body {
     font-family: Raleway, sans-serif;
@@ -28,4 +30,13 @@ body {
     background-image: url("../assets/icons/arrow_back_black.svg");
     background-position: center;
     background-repeat: no-repeat;
+}
+h2 {
+    font-family: Raleway-bold, sans-serif;
+    font-size: 1.65rem;
+    text-align: center;
+}
+h3 {
+    font-family: Raleway-bold, sans-serif;
+    font-size: 1.25rem;
 }

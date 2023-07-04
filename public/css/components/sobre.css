@@ -7,11 +7,6 @@
     padding: 16px;
     gap: 16px;
 }
-.sobre__section .container_sobre__div .title_sobre__h2 {
-    font-family: Raleway-bold, sans-serif;
-    font-size: 1.65rem;
-    color: #464646;
-}
 .sobre__section .signature__div {
     width: 140px;
     height: 52px;

@@ -1,10 +1,8 @@
 .formacion__section {
+    background-color: var(--bg-color-baby-blue-eyes);
     padding: 32px;
 }
 .formacion__section .title_formacion__h2 {
-    font-family: Raleway-bold, sans-serif;
-    font-size: 1.65rem;
-    text-align: center;
     margin-bottom: 32px;
 }
 .formacion__section .experiences_container__div {
@@ -42,8 +40,6 @@
     gap: 8px;
 }
 .formacion__section .experiences_container__div .content_experience__div .experiencie_description__div .title_description__h3 {
-    font-family: Raleway-bold, sans-serif;
-    font-size: 1.25rem;
     text-align: start;
 }
 .formacion__section .experiences_container__div .content_experience__div .experiencie_description__div .description_date__p {
