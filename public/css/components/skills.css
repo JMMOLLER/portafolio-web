@@ -1,0 +1,30 @@
+.skills__section {
+    padding: 16px;
+}
+.skills__section .title_skills__h2 {
+    font-family: Raleway-bold, sans-serif;
+    font-size: 1.65rem;
+    text-align: center;
+    margin-bottom: 32px;
+}
+.skills__section .container_skills__div {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+.skills__section .container_skills__div .content_skills__div {
+    background-color: white;
+    height: 118px;
+    width: 156px;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: flex-start;
+    padding: 16px;
+    margin-bottom: 16px;
+}
+.skills__section .container_skills__div .content_skills__div .skills__p {
+    font-family: Raleway-bold, sans-serif;
+    font-size: 1.25rem;
+}

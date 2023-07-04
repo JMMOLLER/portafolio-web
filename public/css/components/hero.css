@@ -1,0 +1,32 @@
+.hero__section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    padding: 16px;
+}
+.hero__section .hero__img {
+    width: 100px;
+    height: auto;
+    border-radius: 100%;
+}
+.hero__section .hero_title__h1 {
+    font-family: Raleway-bold, sans-serif;
+    font-size: 1.65rem;
+}
+.hero__section .hero_subtitle__div{
+    font-family: Raleway, sans-serif;
+    font-size: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 16px;
+}
+.hero__section .hero_subtitle__div .container_link__div {
+    font-family: Raleway-bold, sans-serif;
+    display: flex;
+    gap: 8px;
+}
+.hero__section .hero_subtitle__div .container_link__div .link__a {
+    display: flex;
+    text-decoration: none;
+}

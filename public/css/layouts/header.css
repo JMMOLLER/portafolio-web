@@ -1,0 +1,23 @@
+.header {
+    display: flex;
+    padding: 16px;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+.header .container_left__div {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.fullname__p {
+    font-family: Raleway-bold;
+}
+.header .container_right__div {
+    display: flex;
+    align-items: center;
+}
+.header .container_right__div .email__a  {
+    text-decoration: none;
+    color: #464646;
+}

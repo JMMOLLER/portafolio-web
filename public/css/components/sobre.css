@@ -1,0 +1,21 @@
+.sobre__section {
+    background-color: var(--bg-color-baby-blue-eyes);
+}
+.sobre__section .container_sobre__div {
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    gap: 16px;
+}
+.sobre__section .container_sobre__div .title_sobre__h2 {
+    font-family: Raleway-bold, sans-serif;
+    font-size: 1.65rem;
+    color: #464646;
+}
+.sobre__section .signature__div {
+    width: 140px;
+    height: 52px;
+    background-image: url("../assets/imgs/signature.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
