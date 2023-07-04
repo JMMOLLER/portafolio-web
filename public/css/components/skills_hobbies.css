@@ -1,0 +1,80 @@
+.skills__section, .hobbies__section {
+    padding: 16px;
+}
+.skills__section .title_skills__h2, .hobbies__section .title_hobbies__h2 {
+    font-family: Raleway-bold, sans-serif;
+    font-size: 1.65rem;
+    text-align: center;
+    margin-bottom: 32px;
+}
+.skills__section .container_skills__div, .hobbies__section .container_hobbies__div {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+.skills__section .container_skills__div .content_skills__div, .hobbies__section .container_hobbies__div .content_hobbies__div {
+    background-color: #ffffff;
+    height: 118px;
+    width: 156px;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: flex-start;
+    margin-bottom: 16px;
+    padding: 16px;
+    gap: 8px;
+}
+.skills__section .container_skills__div .content_skills__div:last-child {
+    margin-bottom: 0;
+}
+.skills__section .container_skills__div .content_skills__div .skills__p, .hobbies__section .container_hobbies__div .content_hobbies__div .hobbies__p {
+    font-family: Raleway-bold, sans-serif;
+    font-size: 1.25rem;
+}
+.container_icon__div {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 32px;
+    height: 32px;
+}
+
+/* ===================== ICONS SKILLS ===================== */
+
+.container_icon__div.html {
+    background-image: url("../../assets/icons/icons8-html5.svg");
+}
+.container_icon__div.css {
+    background-image: url("../../assets/icons/icons8-css3.svg");
+}
+.container_icon__div.js {
+    background-image: url("../../assets/icons/icons8-javascript.svg");
+}
+.container_icon__div.react {
+    background-image: url("../../assets/icons/icons8-react-js.svg");
+}
+.container_icon__div.node {
+    background-image: url("../../assets/icons/icons8-nodejs.svg");
+}
+.container_icon__div.express {
+    background-image: url("../../assets/icons/icons8-express-js.svg");
+}
+.container_icon__div.mongodb {
+    background-image: url("../../assets/icons/icons8-mongodb.svg");
+}
+
+/* ===================== ICONS HOBBIES ===================== */
+
+.container_icon__div.headphones {
+    background-image: url("../../assets/icons/icons8-headphones.svg");
+}
+.container_icon__div.tv {
+    background-image: url("../../assets/icons/icons8-tv.svg");
+}
+.container_icon__div.forkspoon {
+    background-image: url("../../assets/icons/icons8-forkspoon.svg");
+}
+.container_icon__div.book {
+    background-image: url("../../assets/icons/icons8-book.svg");
+}
