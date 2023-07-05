@@ -11,6 +11,8 @@
     --bg-color-baby-blue-eyes: #EAF2FD;
     --azul-100: #2A7AE4;
     --white: #FFFFFF;
+    --middle-gray: #A2A2A2;
+    --platinum-grey: #C8C8C8;
 }
 body {
     font-family: Raleway, sans-serif;
@@ -39,4 +41,9 @@ h2 {
 h3 {
     font-family: Raleway-bold, sans-serif;
     font-size: 1.25rem;
+}
+h4 {
+    font-family: Raleway, sans-serif;
+    font-size: 1.2rem;
+    text-align: center;
 }

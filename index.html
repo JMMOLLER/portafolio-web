@@ -80,27 +80,33 @@
         <section class="hobbies__section">
             <h2 class="title_hobbies__h2">Hobbies</h2>
             <div class="container_hobbies__div">
+
                 <div class="content_hobbies__div">
                     <div class="container_icon__div headphones"></div>
                     <p class="hobbies__p">Oír música</p>
                 </div>
+
                 <div class="content_hobbies__div">
                     <div class="container_icon__div tv"></div>
                     <p class="hobbies__p">Ver series</p>
                 </div>
+
                 <div class="content_hobbies__div">
                     <div class="container_icon__div forkspoon"></div>
                     <p class="hobbies__p">Cocinar</p>
                 </div>
+
                 <div class="content_hobbies__div">
                     <div class="container_icon__div book"></div>
                     <p class="hobbies__p">Leer</p>
                 </div>
+
             </div>
         </section>
         <section class="formacion__section">
             <h2 class="title_formacion__h2">Formación académica</h2>
             <div class="experiences_container__div">
+
                 <div class="content_experience__div">
                     <a href="#" class="link_experiences__link">
                         <img src="./public/assets/imgs/alura.webp" alt="" class="experience__img">
@@ -110,6 +116,7 @@
                         <p class="description_date__p">Actualidad - Alura</p>
                     </div>
                 </div>
+
                 <div class="content_experience__div">
                     <a href="#" class="link_experiences__link dark">
                         <img src="./public/assets/imgs/coderhouse.png" alt="logo coderhouse" class="experience__img">
@@ -119,6 +126,7 @@
                         <p class="description_date__p">2023 - CoderHouse</p>
                     </div>
                 </div>
+
                 <div class="content_experience__div">
                     <a href="#" class="link_experiences__link">
                         <img src="./public/assets/imgs/ibm.webp" alt="" class="experience__img">
@@ -128,6 +136,7 @@
                         <p class="description_date__p">2022 - IBM</p>
                     </div>
                 </div>
+
                 <div class="content_experience__div">
                     <a href="#" class="link_experiences__link green">
                         <img src="./public/assets/imgs/MongoDB.png" alt="" class="experience__img">
@@ -137,6 +146,7 @@
                         <p class="description_date__p">Actualidad - MongoDB</p>
                     </div>
                 </div>
+
                 <div class="content_experience__div">
                     <a href="#" class="link_experiences__link dark">
                         <img src="./public/assets/imgs/coderhouse.png" alt="logo coderhouse" class="experience__img">
@@ -146,11 +156,13 @@
                         <p class="description_date__p">2023 - CoderHouse</p>
                     </div>
                 </div>
+
             </div>
         </section>
         <section class="projects__section" id="projects">
             <h2 class="title_project__h2">Experiencia profesional</h2>
             <div class="projects_container__div">
+                
                 <div class="content_project__div">
                     <div class="container_project__img">
                         <img src="./public/assets/imgs/encriptador_texto.png" alt="imagen encriptador de texto" class="project__img">
@@ -172,6 +184,7 @@
                         </div>
                     </div>
                 </div>
+
                 <div class="content_project__div">
                     <div class="container_project__img">
                         <img src="./public/assets/imgs/tienda_tuya.png" alt="imagen eCommerce TiendaTuya" class="project__img">
@@ -193,6 +206,7 @@
                         </div>
                     </div>
                 </div>
+
                 <div class="content_project__div">
                     <div class="container_project__img">
                         <img src="./public/assets/imgs/solym_web.png" alt="imagen proyecto Solym" class="project__img">
@@ -214,8 +228,38 @@
                         </div>
                     </div>
                 </div>
+
             </div>
         </section>
     </main>
+    <footer class="footer_content__footer">
+        <div class="contacto__div">
+            <h3 class="title_contacto__h3">Contacto</h3>
+            <p class="text_contacto__p">¿Quieres contactarme?<br>Complete el siguiente formulario y me pondré en contacto con usted lo antes posible.</p>
+            <form action="" method="post" class="form_contacto__form">
+                
+                <div class="container_form__input user_name">
+                    <label for="user_name" class="label_form_input__label user_name">Nombre</label>
+                    <input type="text" name="user_name" id="user_name" class="input_form__input" required>
+                </div>
+                <div class="container_form__input user_email">
+                    <label for="user_email" class="label_form_input__label user_email">E-mail</label>
+                    <input type="email" name="user_email" id="user_email" class="input_form__input" required>
+                </div>
+                <div class="container_form__input subject">
+                    <label for="subject" class="label_form_input__label subject">Asunto</label>
+                    <input type="text" name="subject" id="subject" class="input_form__input" required>
+                </div>
+                <div class="container_form__area message_area">
+                    <label for="message_area" class="label_form_input__label message_area">Mensaje</label>
+                    <textarea name="mensaje_area" id="message_area" class="message_form__textarea" cols="38" rows="10" required></textarea>
+                </div>
+
+                <button type="submit" class="submit_form__button">Enviar mensaje</button>
+            </form>
+        </div>
+        <h4 class="author_date__h2">Desarrollado por Jorge Moreno<br>2023</h4>
+    </footer>
+    <script src="./public/js/index.js"></script>
 </body>
 </html>
