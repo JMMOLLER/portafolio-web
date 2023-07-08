@@ -21,6 +21,16 @@
     margin-bottom: 16px;
     padding: 16px;
     gap: 8px;
+    box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    /* This code has been provided by Shaw */
+    --border-size: 3px;
+    --border-angle: 0turn;
+    background-image: conic-gradient(from var(--border-angle), rgb(255, 255, 255), rgb(255, 255, 255) 50%, rgb(255, 255, 255)), conic-gradient(from var(--border-angle), transparent 20%, #08f, #f03);
+    background-size: calc(100% - (var(--border-size) * 2)) calc(100% - (var(--border-size) * 2)), cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    animation: bg-spin 3s linear infinite;
+    /* END */
 }
 .skills__section .container_skills__div .content_skills__div:last-child {
     margin-bottom: 0;
@@ -75,3 +85,16 @@
 .container_icon__div.book {
     background-image: url("../../assets/icons/icons8-book.svg");
 }
+
+/* This code has been provided by Shaw */
+@keyframes bg-spin {
+    to {
+        --border-angle: 1turn;
+   }
+}
+@property --border-angle {
+    syntax: "<angle>";
+    inherits: true;
+    initial-value: 0turn;
+}
+/* END */

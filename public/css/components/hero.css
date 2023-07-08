@@ -10,6 +10,8 @@
     max-width: 300px;
     height: auto;
     border-radius: 100%;
+    border: 5px solid #5195c271;
+    padding: 5px;
 }
 .hero__section .hero_title__h1 {
     font-family: Raleway-bold, sans-serif;
