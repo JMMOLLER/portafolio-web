@@ -49,7 +49,7 @@ class TypeAnimation {
             for (let i = 0; i < this.strings.length; i++) {
                 await this.type(this.strings[i]);
                 await new Promise(resolve => setTimeout(resolve, this.delayBtwStrings));
-                if(!this.loop && this.strings.length-1 > i )await this.untype();
+                if((!this.loop && this.strings.length-1 > i) || this.loop )await this.untype();
             }
 
             if (!this.loop) {

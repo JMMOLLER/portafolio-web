@@ -3,7 +3,7 @@ const typeAnimation = new TypeAnimation('#toType', {
     typeSpeed: 150,
     backSpeed: 100,
     delayBtwStrings: 2000,
-    loop: false
+    loop: true
 });
 
 const inputs_id = ["user_name", "user_email", "subject", "message_area"];
