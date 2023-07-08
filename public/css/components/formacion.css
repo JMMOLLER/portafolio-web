@@ -9,10 +9,12 @@
     width: 100%;
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-evenly;
     gap: 16px;
 }
 .formacion__section .experiences_container__div .content_experience__div {
     width: 100%;
+    max-width: 20cm;
     display: flex;
     flex-direction: column;
     gap: 8px;
@@ -24,15 +26,16 @@
     justify-content: center;
     background-color: #ffffff;
     max-width: 100%;
-    height: 118px;
+    min-height: 150px;
+    padding: 10% 0;
+    margin-bottom: 1rem;
 }
 .formacion__section .experiences_container__div .content_experience__div .link_experiences__link.dark {
     background-color: #000000;
 }
 .formacion__section .experiences_container__div .content_experience__div .link_experiences__link .experience__img {
-    width: 50%;
-    height: auto;
-    max-height: 100%;
+    width: 30%;
+    min-width: 150px;
 }
 .formacion__section .experiences_container__div .content_experience__div .experiencie_description__div {
     display: flex;

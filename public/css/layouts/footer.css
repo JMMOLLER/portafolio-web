@@ -29,6 +29,9 @@
 .footer_content__footer .contacto__div .form_contacto__form .container_form__input.checked {
     border-bottom: 2px solid var(--azul-100);
 }
+.footer_content__footer .contacto__div .form_contacto__form .container_form__input.invalid {
+    border: 2px solid #ff0000;
+}
 .footer_content__footer .contacto__div .form_contacto__form .container_form__input .label_form_input__label, .container_form__area .label_form_input__label {
     color: var(--middle-gray);
     padding-left: 2px;
@@ -40,10 +43,10 @@
 .footer_content__footer .contacto__div .form_contacto__form .container_form__input .label_form_input__label.checked {
     animation: move_placeholder .1s ease-in-out forwards;
 }
-.footer_content__footer .contacto__div .form_contacto__form .container_form__input .label_form_input__label.checked.add {
+.footer_content__footer .contacto__div .form_contacto__form .container_form__input .label_form_input__label.checked.contain_text {
     color: var(--middle-gray) !important;
 }
-.footer_content__footer .contacto__div .form_contacto__form .container_form__input .label_form_input__label.checked.add:focus {
+.footer_content__footer .contacto__div .form_contacto__form .container_form__input .label_form_input__label.checked.contain_text:focus {
     color: var(--azul-100) !important;
 }
 .footer_content__footer .contacto__div .form_contacto__form .container_form__input .label_form_input__label.unchecked {
@@ -66,15 +69,21 @@
 }
 .footer_content__footer .contacto__div .form_contacto__form .container_form__area {
     min-height: 150px;
+    max-height: 300px;
     position: relative;
+}
+.footer_content__footer .contacto__div .form_contacto__form .container_form__area.invalid {
+    border: 2px solid #ff0000;
 }
 .footer_content__footer .contacto__div .form_contacto__form .container_form__area.checked {
     border-bottom: 3px solid var(--azul-100);
 }
 .footer_content__footer .contacto__div .form_contacto__form .container_form__area .message_form__textarea {
-    height: 110px;
+    min-height: 110px;
+    padding-top: calc(8px + 1.5rem);
     font-size: 1.1rem;
     caret-color: var(--azul-100);
+    resize: vertical;
     border: 0;
 }
 .footer_content__footer .contacto__div .form_contacto__form .container_form__area .message_form__textarea:focus {
@@ -82,8 +91,8 @@
 }
 .footer_content__footer .contacto__div .form_contacto__form .container_form__area .label_form_input__label {
     height: 25px;
-    top: 20%;
-    transform: translateY(20%);
+    top: 15px;
+    transform: translateY(15px);
 }
 .footer_content__footer .contacto__div .form_contacto__form .container_form__area .label_form_input__label.checked {
     animation: move_placeholder_textarea .1s ease-in-out forwards;
@@ -91,10 +100,23 @@
 .footer_content__footer .contacto__div .form_contacto__form .container_form__area .label_form_input__label.unchecked {
     animation: reset_placeholder_textarea .1s ease-in-out forwards;
 }
-.footer_content__footer .contacto__div .form_contacto__form .container_form__area .label_form_input__label.checked.add {
+.footer_content__footer .contacto__div .form_contacto__form .container_form__area .label_form_input__label.checked.contain_text {
     color: var(--middle-gray) !important;
 }
-.submit_form__button {
+.errorr_message__span {
+    display: none;
+}
+.errorr_message__span.show_error {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    bottom: -25px;
+    left: 1px;
+}
+.errorr_message__span .message_error__p {
+    color: #ff0000;
+}
+.footer_content__footer .contacto__div .form_contacto__form .submit_form__button {
     width: 130px;
     height: 40px;
     padding: 12px 16px;
@@ -133,28 +155,28 @@
 }
 @keyframes move_placeholder_textarea {
     0% {
-        top: 20%;
-        transform: translateY(20%);
+        top: 15px;
+        transform: translateY(15px);
         font-size: 1.3rem;
         color: var(--middle-gray);
     }
     100% {
-        top: 10%;
+        top: 10px;
         font-size: 1rem;
-        transform: translateY(0%);
+        transform: translateY(10px);
         color: var(--azul-100);
     }  
 }
 @keyframes reset_placeholder_textarea {
     0% {
-        top: 10%;
+        top: 10px;
         font-size: 1rem;
-        transform: translateY(0%);
+        transform: translateY(10px);
         color: var(--azul-100);
     }
     100% {
-        top: 20%;
-        transform: translateY(20%);
+        top: 15px;
+        transform: translateY(15px);
         font-size: 1.3rem;
         color: var(--middle-gray);
     }

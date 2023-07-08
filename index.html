@@ -20,6 +20,17 @@
             <img src="./public/assets/imgs/auto_awesome_black.png" alt="imagen logo" class="logo__img">
             <p class="fullname__p">Jorge Luis Moreno</p>
         </div>
+        <div class="container_middle__div">
+            <nav class="container_list__nav">
+                <ul class="container_list__ul">
+                    <li class="container_list__li"><a href="#about_me" class="link_list__a">Sobre mi</a></li>
+                    <li class="container_list__li"><a href="#skills" class="link_list__a">Skills</a></li>
+                    <li class="container_list__li"><a href="#hobbies" class="link_list__a">Hobbies</a></li>
+                    <li class="container_list__li"><a href="#training" class="link_list__a">Formación</a></li>
+                    <li class="container_list__li"><a href="#contact" class="link_list__a">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
         <div class="container_right__div">
             <a href="mailto:jlmm.jlmm76@gmail.com" class="email__a">jlmm.jlmm76@gmail.com</a>
         </div>
@@ -27,7 +38,7 @@
     <main>
         <section class="hero__section">
             <img src="./public/assets/imgs/profile.jpg" alt="imagen perfil" class="hero__img">
-            <h1 class="hero_title__h1">Hola, mi nombre es Jorge Luis Moreno Moller y soy Desarrollador Frontend</h1>
+            <h1 class="hero_title__h1">Hola, <br> mi nombre es Jorge Luis Moreno Moller y soy <span id="toType">Desarrollador Fullstack</span></h1>
             <div class="hero_subtitle__div">
                 <p class="hero_subtitle__p">Mi pasión por el desarrollo fontend y backend me han llevado a aprender e investigar sobre varias tecnologías de desarrollo, conozco sobre metodologías ágiles</p>
                 <div class="container_link__div">
@@ -36,7 +47,7 @@
                 </div>
             </div>
         </section>
-        <section class="sobre__section">
+        <section class="sobre__section" id="about_me">
             <div class="container_sobre__div">
                 <h2 class="title_sobre__h2">Sobre mi</h2>
                 <p class="sobre__p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium libero consequuntur earum, doloremque commodi distinctio totam impedit unde, similique, voluptates beatae aperiam magnam aut ipsum illum corrupti facere saepe fugiat.<br><br>
@@ -44,7 +55,7 @@
                 <div class="signature__div"></div>
             </div>
         </section>
-        <section class="skills__section">
+        <section class="skills__section" id="skills">
             <h2 class="title_skills__h2">Skills</h2>
             <div class="container_skills__div">
                 <div class="content_skills__div">
@@ -77,7 +88,7 @@
                 </div>
             </div>
         </section>
-        <section class="hobbies__section">
+        <section class="hobbies__section" id="hobbies">
             <h2 class="title_hobbies__h2">Hobbies</h2>
             <div class="container_hobbies__div">
 
@@ -103,7 +114,7 @@
 
             </div>
         </section>
-        <section class="formacion__section">
+        <section class="formacion__section" id="training">
             <h2 class="title_formacion__h2">Formación académica</h2>
             <div class="experiences_container__div">
 
@@ -232,7 +243,7 @@
             </div>
         </section>
     </main>
-    <footer class="footer_content__footer">
+    <footer class="footer_content__footer" id="contact">
         <div class="contacto__div">
             <h3 class="title_contacto__h3">Contacto</h3>
             <p class="text_contacto__p">¿Quieres contactarme?<br>Complete el siguiente formulario y me pondré en contacto con usted lo antes posible.</p>
@@ -241,18 +252,42 @@
                 <div class="container_form__input user_name">
                     <label for="user_name" class="label_form_input__label user_name">Nombre</label>
                     <input type="text" name="user_name" id="user_name" class="input_form__input" required>
+                    <span class="errorr_message__span user_name" role="alert">
+                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="10" height="10" viewBox="0,0,256,256" style="fill:#000000;">
+                            <g fill="#ff0000" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(10.66667,10.66667)"><path d="M9.365,13.055l-6.365,-1.813l1.196,-3.684l6.304,2.544l-0.405,-7.102h3.973l-0.405,7.245l6.142,-2.503l1.195,3.724l-6.486,1.811l4.257,5.419l-3.224,2.304l-3.689,-5.949l-3.649,5.745l-3.223,-2.2z"></path></g></g>
+                        </svg>
+                        <p class="message_error__p user_name"></p>
+                    </span>
                 </div>
                 <div class="container_form__input user_email">
                     <label for="user_email" class="label_form_input__label user_email">E-mail</label>
                     <input type="email" name="user_email" id="user_email" class="input_form__input" required>
+                    <span class="errorr_message__span user_email" role="alert">
+                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="10" height="10" viewBox="0,0,256,256" style="fill:#000000;">
+                            <g fill="#ff0000" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(10.66667,10.66667)"><path d="M9.365,13.055l-6.365,-1.813l1.196,-3.684l6.304,2.544l-0.405,-7.102h3.973l-0.405,7.245l6.142,-2.503l1.195,3.724l-6.486,1.811l4.257,5.419l-3.224,2.304l-3.689,-5.949l-3.649,5.745l-3.223,-2.2z"></path></g></g>
+                        </svg>
+                        <p class="message_error__p user_email"></p>
+                    </span>
                 </div>
                 <div class="container_form__input subject">
                     <label for="subject" class="label_form_input__label subject">Asunto</label>
                     <input type="text" name="subject" id="subject" class="input_form__input" required>
+                    <span class="errorr_message__span subject" role="alert">
+                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="10" height="10" viewBox="0,0,256,256" style="fill:#000000;">
+                            <g fill="#ff0000" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(10.66667,10.66667)"><path d="M9.365,13.055l-6.365,-1.813l1.196,-3.684l6.304,2.544l-0.405,-7.102h3.973l-0.405,7.245l6.142,-2.503l1.195,3.724l-6.486,1.811l4.257,5.419l-3.224,2.304l-3.689,-5.949l-3.649,5.745l-3.223,-2.2z"></path></g></g>
+                        </svg>
+                        <p class="message_error__p subject"></p>
+                    </span>
                 </div>
                 <div class="container_form__area message_area">
                     <label for="message_area" class="label_form_input__label message_area">Mensaje</label>
                     <textarea name="mensaje_area" id="message_area" class="message_form__textarea" cols="38" rows="10" required></textarea>
+                    <span class="errorr_message__span message_area" role="alert">
+                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="10" height="10" viewBox="0,0,256,256" style="fill:#000000;">
+                            <g fill="#ff0000" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(10.66667,10.66667)"><path d="M9.365,13.055l-6.365,-1.813l1.196,-3.684l6.304,2.544l-0.405,-7.102h3.973l-0.405,7.245l6.142,-2.503l1.195,3.724l-6.486,1.811l4.257,5.419l-3.224,2.304l-3.689,-5.949l-3.649,5.745l-3.223,-2.2z"></path></g></g>
+                        </svg>
+                        <p class="message_error__p message_area"></p>
+                    </span>
                 </div>
 
                 <button type="submit" class="submit_form__button">Enviar mensaje</button>
@@ -260,6 +295,7 @@
         </div>
         <h4 class="author_date__h2">Desarrollado por Jorge Moreno<br>2023</h4>
     </footer>
+    <script src="./public/js/TypeAnimation.js"></script>
     <script src="./public/js/index.js"></script>
 </body>
 </html>

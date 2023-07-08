@@ -1,8 +1,9 @@
 .header {
     display: flex;
-    padding: 16px;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
+    padding: 16px;
     gap: 20px;
 }
 .header .container_left__div {
@@ -13,11 +14,28 @@
 .fullname__p {
     font-family: Raleway-bold;
 }
+.header .container_middle__div .container_list__nav .container_list__ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    gap: 20px;
+}
+.header .container_middle__div .container_list__nav .container_list__ul .container_list__li .link_list__a {
+    text-decoration: none;
+    color: #464646;
+}
 .header .container_right__div {
     display: flex;
     align-items: center;
 }
 .header .container_right__div .email__a  {
+    font-family: Raleway-bold;
     text-decoration: none;
     color: #464646;
+}
+
+@media screen and (max-width: 1024px) {
+    .header .container_middle__div {
+        display: none;
+    }
 }
