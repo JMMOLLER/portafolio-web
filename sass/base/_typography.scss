@@ -1,30 +1,42 @@
 /* Custom typography */
 h1 {
     font-family: 'Syne-bold', sans-serif;
-    font-size: 72px;
+    font-size: 4vw;
+    color: $white;
+    text-align: center;
 }
 h2 {
     font-family: 'Syne', sans-serif;
     font-size: 64px;
+    color: $white;
+    text-align: center;
 }
 h3 {
     font-family: 'Syne', sans-serif;
     font-size: 56px;
+    color: $white;
+    text-align: center;
 }
 h4 {
     font-family: 'Rubik-Medium', sans-serif;
     font-size: 24px;
+    color: $white;
+    text-align: center;
 }
-p.body-large {
+.body-large {
     font-family: 'Rubik', sans-serif;
     font-size: 18px;
+    color: $medium-grey;
 }
-p.body-medium {
+.body-medium {
     font-family: 'Rubik', sans-serif;
     font-size: 16px;
+    color: $medium-grey;
 }
 button {
     font-family: 'Rubik', sans-serif;
     font-size: 16px;
+    color: $white;
 }
+
 /* END Custom typography */

@@ -1,19 +1,81 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link  type="text/css" rel="stylesheet" href="./public/css/style.css">
+    <link type="text/css" rel="stylesheet" href="./public/css/style.css">
     <title>Portafolio - Jorge Moreno</title>
 </head>
+
 <body>
-    <h1>The quick brown fox...</h1>
-    <h2>The quick brown fox...</h2>
-    <h3>The quick brown fox...</h3>
-    <h4>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form,</h4>
-    <hr>
-    <p class="body-large">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form,</p>
-    <p class="body-medium">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form,</p>
-    <button>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form,</button>
+
+    <header>
+        <img src="./public/assets/icons/logo.svg" alt="imagen logo" class="logo__img">
+        <div class="container_right__div desktop">
+            <nav class="navbar">
+                <ul class="menu">
+                    <li class="menu__item"><a href="#" class="menu__link body-medium">inicio</a></li>
+                    <li class="menu__item"><a href="#" class="menu__link body-medium">sobre mi</a></li>
+                    <li class="menu__item"><a href="#" class="menu__link body-medium">mi formación</a></li>
+                    <li class="menu__item"><a href="#" class="menu__link body-medium">mis proyectos</a></li>
+                </ul>
+            </nav>
+            <button type="button" class="button header__button">Contáctame</button>
+        </div>
+        <div class="container_right__div mobile">
+            <!-- toggle -->
+            <button type="button" class="toggle" title="toggle navbar">
+                <div class="toggle__line"></div>
+                <div class="toggle__line"></div>
+                <div class="toggle__line"></div>
+            </button>
+            <nav class="navbar">
+                <ul class="menu">
+                    <li class="menu__item"><a href="#" class="menu__link body-medium">inicio</a></li>
+                    <li class="menu__item"><a href="#" class="menu__link body-medium">sobre mi</a></li>
+                    <li class="menu__item"><a href="#" class="menu__link body-medium">mi formación</a></li>
+                    <li class="menu__item"><a href="#" class="menu__link body-medium">mis proyectos</a></li>
+                </ul>
+            </nav>
+            <button type="button" class="button header__button">Contáctame</button>
+        </div>
+    </header>
+    
+    <main>
+        <div class="container_vector__div">
+            <svg xmlns="http://www.w3.org/2000/svg" width="917" height="651" viewBox="0 0 917 651" fill="none">
+                <g filter="url(#filter0_f_101_462)">
+                  <path d="M485.187 449.805C580.282 443.548 642.347 408.446 702.715 326.776C825.011 161.329 110.485 108.772 209.995 290.534C272.738 405.139 363.72 457.796 485.187 449.805Z" fill="white" fill-opacity="0.18"/>
+                </g>
+                <defs>
+                  <filter id="filter0_f_101_462" x="0.454948" y="-23.6465" width="916.391" height="674.24" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                    <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                    <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+                    <feGaussianBlur stdDeviation="100" result="effect1_foregroundBlur_101_462"/>
+                  </filter>
+                </defs>
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="917" height="651" viewBox="0 0 917 651" fill="none">
+                <g filter="url(#filter0_f_101_462)">
+                  <path d="M485.187 449.805C580.282 443.548 642.347 408.446 702.715 326.776C825.011 161.329 110.485 108.772 209.995 290.534C272.738 405.139 363.72 457.796 485.187 449.805Z" fill="white" fill-opacity="0.18"/>
+                </g>
+                <defs>
+                  <filter id="filter0_f_101_462" x="0.454948" y="-23.6465" width="916.391" height="674.24" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                    <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                    <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+                    <feGaussianBlur stdDeviation="100" result="effect1_foregroundBlur_101_462"/>
+                  </filter>
+                </defs>
+            </svg>
+        </div>
+        <h1 class="title__main">Mi Pasión es ser <span id="toType"></span></h1>
+    </main>
+
+
+    <script src="./public/js/navbar.js"></script>
+    <script src="./public/js/TypeAnimation.js"></script>
+    <script src="./public/js/index.js"></script>
 </body>
+
 </html>

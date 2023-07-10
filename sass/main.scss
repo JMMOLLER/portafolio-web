@@ -4,3 +4,9 @@
 /* Base */
 @import "base/_reset";
 @import "base/_typography";
+@import "base/_base";
+/* Components */
+@import "components/_header";
+@import "components/_button";
+/* Sections */
+@import "sections/_main.scss";
