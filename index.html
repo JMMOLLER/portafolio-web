@@ -15,13 +15,21 @@
         <div class="container_right__div desktop">
             <nav class="navbar">
                 <ul class="menu">
-                    <li class="menu__item"><a href="#" class="menu__link body-medium">inicio</a></li>
-                    <li class="menu__item"><a href="#" class="menu__link body-medium">sobre mi</a></li>
-                    <li class="menu__item"><a href="#" class="menu__link body-medium">mi formación</a></li>
-                    <li class="menu__item"><a href="#" class="menu__link body-medium">mis proyectos</a></li>
+                    <li class="menu__item">
+                        <a href="#home" class="menu__link id__link body-medium">inicio</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="#about_me" class="menu__link id__link body-medium">sobre mi</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="#training" class="menu__link id__link body-medium">mi formación</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="#" class="menu__link id__link body-medium">mis proyectos</a>
+                    </li>
                 </ul>
             </nav>
-            <button type="button" class="button header__button">Contáctame</button>
+            <a href="mailto:jlmm.jlmm@gmail.com" class="to_email__link"><button type="button" class="button header__button">Contáctame</button></a>
         </div>
         <div class="container_right__div mobile">
             <!-- toggle -->
@@ -32,13 +40,21 @@
             </button>
             <nav class="navbar">
                 <ul class="menu">
-                    <li class="menu__item"><a href="#" class="menu__link body-medium">inicio</a></li>
-                    <li class="menu__item"><a href="#" class="menu__link body-medium">sobre mi</a></li>
-                    <li class="menu__item"><a href="#" class="menu__link body-medium">mi formación</a></li>
-                    <li class="menu__item"><a href="#" class="menu__link body-medium">mis proyectos</a></li>
+                    <li class="menu__item">
+                        <a href="#home" class="menu__link id__link body-medium">inicio</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="#about_me" class="menu__link id__link body-medium">sobre mi</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="#training" class="menu__link id__link body-medium">mi formación</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="#" class="menu__link id__link body-medium">mis proyectos</a>
+                    </li>
                 </ul>
             </nav>
-            <button type="button" class="button header__button">Contáctame</button>
+            <a href="mailto:jlmm.jlmm@gmail.com" class="to_email__link"><button type="button" class="button header__button">Contáctame</button></a>
         </div>
     </header>
     
@@ -69,7 +85,135 @@
                 </defs>
             </svg>
         </div>
-        <h1 class="title__main">Mi Pasión es ser <span id="toType"></span></h1>
+        <section class="hero__section" id="home">
+            <h1 class="title__main">Mi Pasión es ser <span id="toType"></span></h1>
+            <a href="#about_me" class="to_about__link id__link">
+                <button type="button" class="button fill-orange works_hero__button">
+                    Ver Información
+                    <i class="icon arrow_right__i"></i>
+                </button>
+            </a>
+        </section>
+        <section class="about__section" id="about_me">
+            <div class="content_left__div">
+                <h2 class="title_about__div">Empecemos conociéndome un poco</h2>
+                <p class="body-large">
+                    Hola, mi nombre es Jorge y soy un desarrollador backend en busca de convertirme en un desarrollador fullstack. Cuento con estudios y certificados en distintos institutos, los cuales avalan mis conocimientos y experiencias en el campo del desarrollo de software. Mi objetivo es ampliar mis habilidades y conocimientos para abarcar tanto el frontend como el backend, brindando soluciones integrales y versátiles a los proyectos en los que participo. Estoy comprometido con el aprendizaje continuo y la mejora constante, siempre dispuesto a enfrentar nuevos desafíos y contribuir al éxito de los equipos de desarrollo.
+                </p>
+                <a href="#training" class="to_training__link id__link">
+                    <button type="button" class="button fill-orange view_training__button">Ver Formación</button>
+                </a>
+            </div>
+            <img src="./public/assets/imgs/profile.jpg" alt="" class="profile__img">
+        </section>
+        <section class="training__section" id="training">
+            <h2 class="title_training__h2">Mi Formación</h2>
+            <div class="training_items_container__div">
+                <div class="training_item__div">
+                    <a href="#" class="to_certificate__link coderhouse">
+                        <div class="screenshot__div "></div>
+                    </a>
+                    <div class="footer_item__div">
+                        <h4 class="title_footer_item__h4">Programación Backend</h4>
+                        <div class="description_container__div">
+                            <div class="description_item__div">
+                                <p class="body-medium provider_title__p">Proveedor:</p>
+                                <p class="body-basic provider_info__p">CoderHouse</p>
+                            </div>
+                            <div class="description_item__div">
+                                <p class="body-medium skills_title__p">Skills:</p>
+                                <p class="body-basic skills_info__p">
+                                    ExpressJs, MongoDB, Passport, +11.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="training_item__div">
+                    <a href="#" class="to_certificate__link alura">
+                        <div class="screenshot__div"></div>
+                    </a>
+                    <div class="footer_item__div">
+                        <h4 class="title_footer_item__h4">Formación Frontend</h4>
+                        <div class="description_container__div">
+                            <div class="description_item__div">
+                                <p class="body-medium provider_title__p">Proveedor:</p>
+                                <p class="body-basic provider_info__p">Alura</p>
+                            </div>
+                            <div class="description_item__div">
+                                <p class="body-medium skills_title__p">Skills:</p>
+                                <p class="body-basic skills_info__p">
+                                    HTML, CSS, JS, ReactJs, 22+.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="training_item__div">
+                    <a href="#" class="to_certificate__link mongodb">
+                        <div class="screenshot__div"></div>
+                    </a>
+                    <div class="footer_item__div">
+                        <h4 class="title_footer_item__h4">Associate Developer Node.js</h4>
+                        <div class="description_container__div">
+                            <div class="description_item__div">
+                                <p class="body-medium provider_title__p">Proveedor:</p>
+                                <p class="body-basic provider_info__p">MongoDB</p>
+                            </div>
+                            <div class="description_item__div">
+                                <p class="body-medium skills_title__p">Skills:</p>
+                                <p class="body-basic skills_info__p">
+                                    MongoDB, Transactions, Aggregation, +17.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="training_item__div">
+                    <a href="#" class="to_certificate__link coderhouse">
+                        <div class="screenshot__div "></div>
+                    </a>
+                    <div class="footer_item__div">
+                        <h4 class="title_footer_item__h4">Desarrollo Web</h4>
+                        <div class="description_container__div">
+                            <div class="description_item__div">
+                                <p class="body-medium provider_title__p">Proveedor:</p>
+                                <p class="body-basic provider_info__p">CoderHouse</p>
+                            </div>
+                            <div class="description_item__div">
+                                <p class="body-medium skills_title__p">Skills:</p>
+                                <p class="body-basic skills_info__p">
+                                    HTML, CSS, SASS, SEO, +7.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="training_item__div">
+                    <a href="#" class="to_certificate__link ibm">
+                        <div class="screenshot__div "></div>
+                    </a>
+                    <div class="footer_item__div">
+                        <h4 class="title_footer_item__h4">Python 101 for Data Science</h4>
+                        <div class="description_container__div">
+                            <div class="description_item__div">
+                                <p class="body-medium provider_title__p">Proveedor:</p>
+                                <p class="body-basic provider_info__p">IBM</p>
+                            </div>
+                            <div class="description_item__div">
+                                <p class="body-medium skills_title__p">Skills:</p>
+                                <p class="body-basic skills_info__p">
+                                    Python, Data Science, Pandas.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="to_projects__link">
+                <button type="button" class="button view_projects__button">Ver Proyectos<i class="icon arrow_right__i"></i></button>
+            </a>
+        </section>
     </main>
 
 

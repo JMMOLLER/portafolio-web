@@ -1,0 +1,95 @@
+.training__section {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    gap: 90px;
+
+    .training_items_container__div {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 27px;
+        
+        .training_item__div {
+            min-width: 550px;
+            min-height: 360px;
+            display: flex;
+            flex-direction: column;
+            padding: 0 50px;
+            margin-bottom: 67px;
+            gap: 32px;
+
+            .to_certificate__link {
+                height: 70%;
+                width: 100%;
+
+                .screenshot__div {
+                    width: 100%;
+                    height: 100%;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                    margin: auto;
+                }
+
+                &.coderhouse {
+                    background-color: #000000;
+                    .screenshot__div{
+                        background-image: url("../assets/imgs/coderhouse.webp");
+                    }
+                }
+
+                &.alura {
+                    background-color: $white;
+                    .screenshot__div{
+                        background-image: url("../assets/imgs/alura.webp");
+                    }
+                }
+
+                &.mongodb {
+                    background-color: $white;
+                    .screenshot__div{
+                        background-image: url("../assets/imgs/mongodb.webp");
+                    }
+                }  
+                
+                &.ibm {
+                    background-color: $white;
+                    .screenshot__div{
+                        background-image: url("../assets/imgs/ibm.webp");
+                    }
+                }
+            }
+
+            .footer_item__div {
+                display: flex;
+                flex-direction: column;
+                gap: 32px;
+
+                .description_container__div {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 8px;
+
+                    .description_item__div {
+                        display: flex;
+                        gap: 8px;
+                    }
+                }
+            }
+
+            @media screen and (max-width: 599px) {
+                min-width: 100%;
+            }
+        }
+    }
+
+    .to_projects__link {
+        .view_projects__button {
+            min-width: 241px;
+            min-height: 65px;
+            border: $brand-color 1px solid;
+        }
+    }
+}

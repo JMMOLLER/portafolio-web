@@ -7,19 +7,19 @@ h1 {
 }
 h2 {
     font-family: 'Syne', sans-serif;
-    font-size: 64px;
+    font-size: 3.555555555555556vw;
     color: $white;
     text-align: center;
 }
 h3 {
     font-family: 'Syne', sans-serif;
-    font-size: 56px;
+    font-size: 3.111111111111111vw;
     color: $white;
     text-align: center;
 }
 h4 {
     font-family: 'Rubik-Medium', sans-serif;
-    font-size: 24px;
+    font-size: 2vw;
     color: $white;
     text-align: center;
 }
@@ -33,10 +33,37 @@ h4 {
     font-size: 16px;
     color: $medium-grey;
 }
+.body-basic {
+    font-family: 'Rubik', sans-serif;
+    font-size: 16px;
+    color: $white;
+}
 button {
     font-family: 'Rubik', sans-serif;
     font-size: 16px;
     color: $white;
 }
 
+@media screen and (max-width: 890px) {
+    h1 {
+        font-size: 10vw;
+    }
+    h2 {
+        font-size: 8vw;
+    }
+    h3 {
+        font-size: 6vw;
+    }
+    h4 {
+        font-size: 4vw;
+    }
+}
+@media screen and (max-width: 400px) {
+    h3 {
+        font-size: 8vw;
+    }
+    h4 {
+        font-size: 6vw;
+    }
+}
 /* END Custom typography */
