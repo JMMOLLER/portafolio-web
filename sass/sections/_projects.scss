@@ -1,0 +1,79 @@
+.projects__section {
+    
+    .projects_items_container__div {
+        display: flex;
+        flex-direction: column;
+        padding-top: 60px;
+
+        .projects_item__div {
+            min-width: 550px;
+            min-height: 360px;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            padding: 0 50px;
+            margin-bottom: 67px;
+            gap: 32px;
+
+            .container_image__div {
+                width: 100%;
+                min-height: 200px;
+
+                .screenshot__div {
+                    width: 100%;
+                    height: 100%;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                    margin: auto;
+                }
+
+                &.encriptador {
+                    background-color: $white;
+                    .screenshot__div{
+                        background-image: url("../assets/imgs/encriptador_texto.png");
+                    }
+                }
+
+                &.tienda-tuya {
+                    background-color: $white;
+                    .screenshot__div{
+                        background-image: url("../assets/imgs/tienda_tuya.png");
+                    }
+                }
+            }
+
+            .footer_item__div {
+                max-width: 40%;
+
+                .description_container__div {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 8px;
+                }
+            }
+
+            .buttons_container__div {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 16px;
+                margin-top: 1rem;
+            }
+
+            @media screen and (max-width: 599px) {
+                min-width: 100%;
+
+                .footer_item__div {
+                    max-width: 100%;
+                }
+            }
+            @media screen and (min-width: 600px) {
+
+                .container_image__div {
+                    min-height: 300px;
+                    width: 50%;
+                }
+            }
+        }
+    }
+}

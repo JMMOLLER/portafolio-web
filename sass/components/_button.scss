@@ -20,6 +20,23 @@ button.button.fill-orange {
     border: none;
 }
 
+button.button.border-orange {
+    display: flex;
+    border: $brand-color 1px solid;
+    gap: 3px;
+
+    .icon.arrow_right_up__i {
+        display: inline-block;
+        background-image: url(../assets/icons/arrow-right.svg);
+        background-position: center;
+        background-repeat: no-repeat;
+        transform: rotate(-45deg);
+        margin-bottom: .2rem;
+        width: 20px;
+        height: 20px;
+    }
+}
+
 button {
     .icon.arrow_right__i {
         display: inline-block;
@@ -30,3 +47,4 @@ button {
         height: 20px;
     }
 }
+

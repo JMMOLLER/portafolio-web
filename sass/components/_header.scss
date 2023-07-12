@@ -3,8 +3,8 @@ header {
     display: inline-flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    -webkit-backdrop-filter: blur(7px);
     backdrop-filter: blur(7px);
-    -webkit-backdrop-filte: blur(7px);
     width: 100%;
     padding: 10px;
     top: 0;
@@ -48,8 +48,8 @@ header {
         top: 0;
         left: 0;
         padding: 0 40px;
-        backdrop-filter: blur(7px);
         -webkit-backdrop-filte: blur(7px);
+        backdrop-filter: blur(7px);
         animation: hidden_Navbar 0.5s ease-in-out forwards;
 
         &.is-active {
