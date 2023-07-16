@@ -152,6 +152,15 @@ button {
   color: #FFFFFF;
 }
 
+hr {
+  border: none;
+  height: 1px;
+  margin: 0;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  background: radial-gradient(circle at center, #FF9143, #302c26);
+}
+
 @media screen and (max-width: 890px) {
   h1 {
     font-size: 10vw;
@@ -285,7 +294,7 @@ header .container_right__div.mobile .navbar .menu {
     transform: translateX(-100%);
   }
 }
-@media screen and (max-width: 890px) {
+@media screen and (max-width: 1050px) {
   header {
     backdrop-filter: unset;
     -webkit-backdrop-filte: -moz-initial;
@@ -380,19 +389,27 @@ main .container_vector__div svg:nth-of-type(2) {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   padding-bottom: 125px;
-  gap: 90px;
+  min-height: 100vh;
+  gap: 50px;
 }
 .hero__section .title__main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   width: 70%;
-  min-height: 455px;
-  margin: auto;
-  padding-top: 271px;
+  min-height: 550px;
 }
 .hero__section .title__main span::after {
   content: "";
   border: 2px solid #fff;
   animation: blinking 0.5s linear(0 0%, 0 1.8%, 0.01 3.6%, 0.03 6.35%, 0.07 9.1%, 0.13 11.4%, 0.19 13.4%, 0.27 15%, 0.34 16.1%, 0.54 18.35%, 0.66 20.6%, 0.72 22.4%, 0.77 24.6%, 0.81 27.3%, 0.85 30.4%, 0.88 35.1%, 0.92 40.6%, 0.94 47.2%, 0.96 55%, 0.98 64%, 0.99 74.4%, 1 86.4%, 1 100%) infinite;
+}
+.hero__section .to_about__link {
+  position: sticky;
+  bottom: 10px;
 }
 .hero__section .to_about__link .works_hero__button {
   min-width: 241px;
@@ -408,15 +425,6 @@ main .container_vector__div svg:nth-of-type(2) {
   }
   100% {
     opacity: 1;
-  }
-}
-@media screen and (max-width: 890px) {
-  .hero__section {
-    gap: 30px;
-  }
-  .hero__section .title__main {
-    min-height: 675px;
-    padding-top: 200px;
   }
 }
 .about__section {
@@ -441,9 +449,11 @@ main .container_vector__div svg:nth-of-type(2) {
   text-align: start;
 }
 .about__section .content_left__div .to_training__link {
+  position: sticky;
   margin-top: 50px;
   max-width: 288px;
   max-height: 59px;
+  bottom: 10px;
 }
 .about__section .content_left__div .to_training__link .view_training__button {
   width: 100%;
@@ -455,6 +465,16 @@ main .container_vector__div svg:nth-of-type(2) {
   height: auto;
   border-radius: 30px;
   order: 0;
+}
+@media screen and (max-width: 1050px) {
+  .about__section {
+    padding-top: 50px;
+  }
+}
+@media screen and (max-width: 1312px) {
+  .about__section .to_training__link {
+    margin: auto;
+  }
 }
 
 .training__section {
@@ -481,6 +501,7 @@ main .container_vector__div svg:nth-of-type(2) {
   gap: 32px;
 }
 .training__section .training_items_container__div .training_item__div .to_certificate__link {
+  position: relative;
   height: 70%;
   width: 100%;
 }
@@ -498,11 +519,17 @@ main .container_vector__div svg:nth-of-type(2) {
 .training__section .training_items_container__div .training_item__div .to_certificate__link.coderhouse .screenshot__div {
   background-image: url("../assets/imgs/coderhouse.webp");
 }
+.training__section .training_items_container__div .training_item__div .to_certificate__link.coderhouse .text_to_certificate__span {
+  color: #FFFFFF;
+}
 .training__section .training_items_container__div .training_item__div .to_certificate__link.alura {
   background-color: #FFFFFF;
 }
 .training__section .training_items_container__div .training_item__div .to_certificate__link.alura .screenshot__div {
   background-image: url("../assets/imgs/alura.webp");
+}
+.training__section .training_items_container__div .training_item__div .to_certificate__link.alura .text_to_certificate__span {
+  color: #1A1A1A;
 }
 .training__section .training_items_container__div .training_item__div .to_certificate__link.mongodb {
   background-color: #FFFFFF;
@@ -510,11 +537,38 @@ main .container_vector__div svg:nth-of-type(2) {
 .training__section .training_items_container__div .training_item__div .to_certificate__link.mongodb .screenshot__div {
   background-image: url("../assets/imgs/mongodb.webp");
 }
+.training__section .training_items_container__div .training_item__div .to_certificate__link.mongodb .text_to_certificate__span {
+  color: #1A1A1A;
+}
 .training__section .training_items_container__div .training_item__div .to_certificate__link.ibm {
   background-color: #FFFFFF;
 }
 .training__section .training_items_container__div .training_item__div .to_certificate__link.ibm .screenshot__div {
   background-image: url("../assets/imgs/ibm.webp");
+}
+.training__section .training_items_container__div .training_item__div .to_certificate__link.ibm .text_to_certificate__span {
+  color: #1A1A1A;
+}
+.training__section .training_items_container__div .training_item__div .to_certificate__link:hover .text_to_certificate__span {
+  max-height: 100%;
+}
+.training__section .training_items_container__div .training_item__div .to_certificate__link .text_to_certificate__span {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #FFFFFF;
+  backdrop-filter: blur(7px);
+  top: 0;
+  -webkit-transition: max-height 0.7s;
+  -moz-transition: max-height 0.7s;
+  -ms-transition: max-height 0.7s;
+  -o-transition: max-height 0.7s;
+  transition: max-height 0.7s;
+  overflow: hidden;
+  max-height: 0;
 }
 .training__section .training_items_container__div .training_item__div .footer_item__div {
   display: flex;
@@ -539,6 +593,148 @@ main .container_vector__div svg:nth-of-type(2) {
   min-width: 241px;
   min-height: 65px;
   border: #FF9143 1px solid;
+}
+
+.skills__section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0;
+  padding-top: 120px;
+  padding-bottom: 250px;
+}
+.skills__section .skills_container__div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  padding: 0;
+  padding-top: 50px;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+.skills__section .skills_container__div .skill_item_container__div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 200px;
+  height: 150px;
+  border: #FFFFFF 1px solid;
+  transform: rotateX(90deg);
+  animation: rotate 1s ease-in-out forwards;
+  gap: 10px;
+}
+.skills__section .skills_container__div .skill_item_container__div .image_item__div {
+  width: 100%;
+  height: 100%;
+}
+.skills__section .skills_container__div .skill_item_container__div .image_item__div.css {
+  width: 100%;
+  height: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url("../assets/icons/css-3.svg");
+}
+.skills__section .skills_container__div .skill_item_container__div .image_item__div.django {
+  width: 100%;
+  height: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url("../assets/icons/django.svg");
+}
+.skills__section .skills_container__div .skill_item_container__div .image_item__div.express {
+  width: 100%;
+  height: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url("../assets/icons/express-js.svg");
+}
+.skills__section .skills_container__div .skill_item_container__div .image_item__div.html {
+  width: 100%;
+  height: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url("../assets/icons/html-5.svg");
+}
+.skills__section .skills_container__div .skill_item_container__div .image_item__div.js {
+  width: 100%;
+  height: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url("../assets/icons/javascript.svg");
+}
+.skills__section .skills_container__div .skill_item_container__div .image_item__div.mongodb {
+  width: 100%;
+  height: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url("../assets/icons/mongodb.svg");
+}
+.skills__section .skills_container__div .skill_item_container__div .image_item__div.node {
+  width: 100%;
+  height: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url("../assets/icons/nodejs.svg");
+}
+.skills__section .skills_container__div .skill_item_container__div .image_item__div.python {
+  width: 100%;
+  height: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url("../assets/icons/python.svg");
+}
+.skills__section .skills_container__div .skill_item_container__div .image_item__div.react {
+  width: 100%;
+  height: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url("../assets/icons/react.svg");
+}
+.skills__section .skills_container__div .skill_item_container__div .image_item__div.sass {
+  width: 100%;
+  height: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url("../assets/icons/sass.svg");
+}
+.skills__section .skills_container__div .skill_item_container__div .image_item__div.sql {
+  width: 100%;
+  height: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url("../assets/icons/sql.svg");
+}
+.skills__section .skills_container__div .skill_item_container__div .title_skill_item__p {
+  font-family: "Rubik", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  text-align: center;
+  color: #FFFFFF;
+}
+@keyframes rotate {
+  from {
+    transform: rotateX(90deg);
+  }
+  to {
+    transform: rotateX(0deg);
+  }
+}
+@media screen and (max-width: 1050px) {
+  .skills__section {
+    padding-top: 0;
+  }
 }
 
 .projects__section .projects_items_container__div {
@@ -569,13 +765,13 @@ main .container_vector__div svg:nth-of-type(2) {
   margin: auto;
 }
 .projects__section .projects_items_container__div .projects_item__div .container_image__div.encriptador {
-  background-color: #FFFFFF;
+  background-color: #e0ecff;
 }
 .projects__section .projects_items_container__div .projects_item__div .container_image__div.encriptador .screenshot__div {
   background-image: url("../assets/imgs/encriptador_texto.png");
 }
 .projects__section .projects_items_container__div .projects_item__div .container_image__div.tienda-tuya {
-  background-color: #FFFFFF;
+  background-color: #a0bbec;
 }
 .projects__section .projects_items_container__div .projects_item__div .container_image__div.tienda-tuya .screenshot__div {
   background-image: url("../assets/imgs/tienda_tuya.png");

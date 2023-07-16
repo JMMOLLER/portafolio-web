@@ -43,6 +43,18 @@ button {
     font-size: 16px;
     color: $white;
 }
+hr {
+    border: none;
+    height: 1px;
+    margin: 0 {
+        top: 50px;
+        bottom: 50px;
+    };
+    background: radial-gradient(circle at center, #FF9143, #302c26);
+}
+  
+  
+  
 
 @media screen and (max-width: 890px) {
     h1 {

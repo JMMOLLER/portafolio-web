@@ -21,9 +21,11 @@
         }
 
         .to_training__link {
+            position: sticky;
             margin-top: 50px;
             max-width: 288px;
             max-height: 59px;
+            bottom: 10px;
 
             .view_training__button {
                 width: 100%;
@@ -38,5 +40,14 @@
         height: auto;
         border-radius: 30px;
         order: 0;
+    }
+
+    @media screen and (max-width: 1050px) {
+        padding-top: 50px;
+    }
+    @media screen and (max-width: 1312px) {
+        .to_training__link {
+            margin: auto;
+        }
     }
 }

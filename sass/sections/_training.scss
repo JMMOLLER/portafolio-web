@@ -22,6 +22,7 @@
             gap: 32px;
 
             .to_certificate__link {
+                position: relative;
                 height: 70%;
                 width: 100%;
 
@@ -39,12 +40,18 @@
                     .screenshot__div{
                         background-image: url("../assets/imgs/coderhouse.webp");
                     }
+                    .text_to_certificate__span {
+                        color: $white;
+                    }
                 }
 
                 &.alura {
                     background-color: $white;
                     .screenshot__div{
                         background-image: url("../assets/imgs/alura.webp");
+                    }
+                    .text_to_certificate__span {
+                        color: $dark-grey;
                     }
                 }
 
@@ -53,6 +60,9 @@
                     .screenshot__div{
                         background-image: url("../assets/imgs/mongodb.webp");
                     }
+                    .text_to_certificate__span {
+                        color: $dark-grey;
+                    }
                 }  
                 
                 &.ibm {
@@ -60,8 +70,38 @@
                     .screenshot__div{
                         background-image: url("../assets/imgs/ibm.webp");
                     }
+                    .text_to_certificate__span {
+                        color: $dark-grey;
+                    }
+                }
+
+                &:hover {
+                    .text_to_certificate__span {
+                        max-height: 100%;
+                    }
+                }
+                
+                .text_to_certificate__span {
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    color: $white;
+                    backdrop-filter: blur(7px);
+                    top: 0;
+
+                    -webkit-transition: max-height .7s; 
+                    -moz-transition: max-height .7s; 
+                    -ms-transition: max-height .7s; 
+                    -o-transition: max-height .7s; 
+                    transition: max-height .7s;
+                    overflow: hidden;
+                    max-height: 0;
                 }
             }
+
 
             .footer_item__div {
                 display: flex;
