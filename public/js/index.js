@@ -5,15 +5,3 @@ const typeAnimation = new TypeAnimation('#toType', {
     delayBtwStrings: 2000,
     loop: true
 });
-
-document.querySelectorAll(".id__link").forEach((link) => {
-    link.addEventListener("click", (e) => {
-        e.preventDefault();
-        const href = link.getAttribute("href");
-        const offsetTop = document.querySelector(href).offsetTop;
-        scroll({
-            top: offsetTop,
-            behavior: "smooth"
-        });
-    });
-});
