@@ -1,28 +1,58 @@
-const el = document.querySelector('.toggle');
-const container = document.querySelector('.container_right__div.mobile');
-
 // TOGGLE NAVBAR
 
-el.addEventListener('click', function() {
+export function addEventListenerToNavLinks(el, container) {
+    el.addEventListener('click', toggleOnClick.bind(null, el, container));
+
+    el.addEventListener('focusout', toggleOnFocusOut.bind(null, el, container));
+}
+
+function toggleOnClick(el, container) {
     el.classList.toggle('is-active');
     container.classList.toggle('is-active');
-});
+}
 
-el.addEventListener('focusout', function() {
+function toggleOnFocusOut(el, container) {
     el.classList.remove('is-active');
     container.classList.remove('is-active');
-});
+}
 
 // REDIRECT TO ID
 
-document.querySelectorAll(".id__link").forEach((link) => {
-    link.addEventListener("click", (e) => {
-        e.preventDefault();
-        const href = link.getAttribute("href");
-        const offsetTop = document.querySelector(href).offsetTop;
-        scroll({
-            top: offsetTop,
-            behavior: "smooth"
-        });
+export function addEventListenerToLinks(el) {
+    el.forEach((link) => {
+        link.addEventListener("click", preventRedirect);
     });
-});
+}
+
+function preventRedirect(event) {
+    event.preventDefault();
+    let el = event.target;
+
+    if(el.tagName !== "A") el = el.parentElement;
+
+    const href = el.getAttribute("href");
+    const offsetTop = document.querySelector(href).offsetTop;
+    scroll({
+        top: offsetTop,
+        behavior: "smooth"
+    });
+}
+
+// KEEP LABELS ON FOCUS
+
+export function addEventListenerToInputs(el) {
+    el.forEach((input) => {
+        input.addEventListener("keyup", keepLabelOnFocus);
+    });
+}
+
+function keepLabelOnFocus(event) {
+    const el = event.target;
+    const label = el.nextElementSibling;
+
+    if(el.value.length > 0) {
+        label.classList.add("is-active");
+    } else {
+        label.classList.remove("is-active");
+    }
+}

@@ -5,13 +5,14 @@
 @import "base/_reset";
 @import "base/_typography";
 @import "base/_base";
-/* Components */
-@import "components/_header";
-@import "components/_button";
-/* Sections */
-@import "sections/_main";
-@import "sections/_hero";
-@import "sections/_about";
-@import "sections/_training";
-@import "sections/_skills";
-@import "sections/_projects";
+/* layouts */
+@import "layouts/_header";
+@import "layouts/_footer";
+@import "layouts/_button";
+/* components */
+@import "components/_main";
+@import "components/_hero";
+@import "components/_about";
+@import "components/_training";
+@import "components/_skills";
+@import "components/_projects";

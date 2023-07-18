@@ -1,4 +1,4 @@
-class TypeAnimation {
+export default class TypeAnimation {
 
     constructor(element, options) {
         this.element = document.querySelector(element);

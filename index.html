@@ -32,11 +32,11 @@
                     </li>
                 </ul>
             </nav>
-            <a href="mailto:jlmm.jlmm@gmail.com" class="to_email__link"><button type="button" class="button header__button">Contáctame</button></a>
+            <a href="#contact" class="to_email__link id__link"><button type="button" class="button header__button">Contáctame</button></a>
         </div>
         <div class="container_right__div mobile">
             <!-- toggle -->
-            <button type="button" class="toggle" title="toggle navbar">
+            <button type="button" class="toggle navbar__burger" title="toggle navbar">
                 <div class="toggle__line"></div>
                 <div class="toggle__line"></div>
                 <div class="toggle__line"></div>
@@ -60,7 +60,7 @@
                     </li>
                 </ul>
             </nav>
-            <a href="mailto:jlmm.jlmm@gmail.com" class="to_email__link"><button type="button" class="button header__button">Contáctame</button></a>
+            <a href="#contact" class="to_email__link id__link"><button type="button" class="button header__button">Contáctame</button></a>
         </div>
     </header>
     
@@ -278,7 +278,7 @@
         </section>
         <hr>
         <section class="projects__section" id="projects">
-            <h2 class="title_projects__div">Mis Proyectos</h2>
+            <h2 class="title_projects__div">Experiencia profesional</h2>
             <div class="projects_items_container__div">
                 <div class="projects_item__div">
                     <div class="container_image__div encriptador">
@@ -355,11 +355,64 @@
             </div>
         </section>
     </main>
+    <footer class="footer_content__footer">
+        <div class="contacto__div" id="contact">
+            <h4 class="title_footer__h4">Ponte en contacto conmigo</h4>
+            <p class="body-large text_contacto__p">¿Quieres contactarme?<br>Complete el siguiente formulario y me pondré en contacto con usted lo antes posible.</p>
+            <form action="" method="post" class="form_contacto__form">
+                
+                <div class="container_form__input user_name">
+                    <input type="text" name="user_name" id="user_name" autocomplete="off" placeholder="Nombre" class="input_form__input" required>
+                    <label for="user_name" class="body-medium label_form_input__label">Nombre</label>
+                    <span class="errorr_message__span user_name" role="alert">
+                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="10" height="10" viewBox="0,0,256,256" style="fill:#000000;">
+                            <g fill="#ff0000" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(10.66667,10.66667)"><path d="M9.365,13.055l-6.365,-1.813l1.196,-3.684l6.304,2.544l-0.405,-7.102h3.973l-0.405,7.245l6.142,-2.503l1.195,3.724l-6.486,1.811l4.257,5.419l-3.224,2.304l-3.689,-5.949l-3.649,5.745l-3.223,-2.2z"></path></g></g>
+                        </svg>
+                        <p class="message_error__p user_name"></p>
+                    </span>
+                </div>
+                <div class="container_form__input user_email">
+                    <input type="email" name="user_email" id="user_email" autocomplete="off" class="input_form__input" required>
+                    <label for="user_email" class="body-medium label_form_input__label">E-mail</label>
+                    <span class="errorr_message__span user_email" role="alert">
+                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="10" height="10" viewBox="0,0,256,256" style="fill:#000000;">
+                            <g fill="#ff0000" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(10.66667,10.66667)"><path d="M9.365,13.055l-6.365,-1.813l1.196,-3.684l6.304,2.544l-0.405,-7.102h3.973l-0.405,7.245l6.142,-2.503l1.195,3.724l-6.486,1.811l4.257,5.419l-3.224,2.304l-3.689,-5.949l-3.649,5.745l-3.223,-2.2z"></path></g></g>
+                        </svg>
+                        <p class="message_error__p user_email"></p>
+                    </span>
+                </div>
+                <div class="container_form__input subject">
+                    <input type="text" name="subject" id="subject" autocomplete="off" class="input_form__input" required>
+                    <label for="subject" class="body-medium label_form_input__label">Asunto</label>
+                    <span class="errorr_message__span subject" role="alert">
+                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="10" height="10" viewBox="0,0,256,256" style="fill:#000000;">
+                            <g fill="#ff0000" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(10.66667,10.66667)"><path d="M9.365,13.055l-6.365,-1.813l1.196,-3.684l6.304,2.544l-0.405,-7.102h3.973l-0.405,7.245l6.142,-2.503l1.195,3.724l-6.486,1.811l4.257,5.419l-3.224,2.304l-3.689,-5.949l-3.649,5.745l-3.223,-2.2z"></path></g></g>
+                        </svg>
+                        <p class="message_error__p subject"></p>
+                    </span>
+                </div>
+                <div class="container_form__area message_area">
+                    <textarea name="mensaje_area" id="message_area" class="message_form__textarea" cols="38" rows="10" required></textarea>
+                    <label for="message_area" class="body-medium label_form_area__label">Mensaje</label>
+                    <span class="errorr_message__span message_area" role="alert">
+                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="10" height="10" viewBox="0,0,256,256" style="fill:#000000;">
+                            <g fill="#ff0000" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(10.66667,10.66667)"><path d="M9.365,13.055l-6.365,-1.813l1.196,-3.684l6.304,2.544l-0.405,-7.102h3.973l-0.405,7.245l6.142,-2.503l1.195,3.724l-6.486,1.811l4.257,5.419l-3.224,2.304l-3.689,-5.949l-3.649,5.745l-3.223,-2.2z"></path></g></g>
+                        </svg>
+                        <p class="message_error__p message_area"></p>
+                    </span>
+                </div>
+
+                <div class="form_footer_container__div">
+                    <button type="submit" class="button fill-orange submit_form__button">Enviar mensaje</button>
+                    <p class="body-medium">Ó</p>
+                    <a href="mailto:jlmm.jlmm76@gmail.com" class="body-medium to_app_mail__link">Enviar e-mail con una aplicación</a>
+                </div>
+            </form>
+        </div>
+    </footer>
 
 
-    <script src="./public/js/navbar.js"></script>
-    <script src="./public/js/TypeAnimation.js"></script>
-    <script src="./public/js/index.js"></script>
+    <script src="./public/js/index.js" type="module"></script>
 </body>
 
 </html>

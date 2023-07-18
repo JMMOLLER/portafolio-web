@@ -191,7 +191,7 @@ body {
   background-color: #1A1A1A;
 }
 
-/* Components */
+/* layouts */
 header {
   position: sticky;
   display: inline-flex;
@@ -312,6 +312,221 @@ header .container_right__div.mobile .navbar .menu {
   }
 }
 
+.footer_content__footer .contacto__div {
+  background-color: #000000;
+  padding: 32px;
+}
+.footer_content__footer .contacto__div .title_contacto__h3 {
+  margin-bottom: 8px;
+}
+.footer_content__footer .contacto__div .text_contacto__p {
+  text-align: justify;
+  line-height: 1.2rem;
+  margin-bottom: 32px;
+}
+.footer_content__footer .contacto__div .form_contacto__form {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.footer_content__footer .contacto__div .form_contacto__form .container_form__input, .footer_content__footer .contacto__div .form_contacto__form .container_form__area {
+  background-color: #FFFFFF;
+  min-height: 58px;
+  border-radius: 5px;
+  position: relative;
+  border-bottom: 2px solid #696969;
+}
+.footer_content__footer .contacto__div .form_contacto__form .container_form__input {
+  position: relative;
+}
+.footer_content__footer .contacto__div .form_contacto__form .container_form__input.checked {
+  border-bottom: 2px solid #FF9143;
+}
+.footer_content__footer .contacto__div .form_contacto__form .container_form__input.invalid {
+  border: 2px solid #ff0000;
+}
+.footer_content__footer .contacto__div .form_contacto__form .container_form__input .input_form__input {
+  border: 0;
+  width: 100%;
+  height: 58px;
+  border-radius: 5px;
+  font-size: 1rem;
+  caret-color: #FF9143;
+  font-family: Raleway, sans-serif;
+  padding: 0;
+  padding-top: 15px;
+  padding-left: 12px;
+  padding-right: 12px;
+  position: relative;
+}
+.footer_content__footer .contacto__div .form_contacto__form .container_form__input .input_form__input::placeholder {
+  color: #696969;
+  visibility: hidden;
+  font-family: Raleway, sans-serif;
+  font-size: 1.2rem;
+}
+.footer_content__footer .contacto__div .form_contacto__form .container_form__input .input_form__input:focus + .label_form_input__label {
+  outline: none;
+  animation: move_placeholder 0.1s ease-in-out forwards;
+}
+.footer_content__footer .contacto__div .form_contacto__form .container_form__input .input_form__input:not(:focus) + .label_form_input__label.is-active {
+  color: #696969 !important;
+  animation: move_placeholder 0.1s ease-in-out forwards;
+}
+.footer_content__footer .contacto__div .form_contacto__form .container_form__input .input_form__input:not(:focus) + .label_form_input__label {
+  animation: reset_placeholder 0.1s ease-in-out forwards;
+}
+.footer_content__footer .contacto__div .form_contacto__form .container_form__input .label_form_input__label {
+  padding-left: 10px;
+  font-size: 1.3rem;
+  position: absolute;
+  bottom: 50%;
+  left: 0;
+  user-select: none;
+  transform: translateY(50%);
+}
+.footer_content__footer .contacto__div .form_contacto__form .container_form__input .label_form_input__label.checked.contain_text {
+  color: #696969 !important;
+}
+.footer_content__footer .contacto__div .form_contacto__form .container_form__input .label_form_input__label.checked.contain_text:focus {
+  color: #FF9143 !important;
+}
+.footer_content__footer .contacto__div .form_contacto__form .container_form__area {
+  min-height: 150px;
+  max-height: 300px;
+  position: relative;
+}
+.footer_content__footer .contacto__div .form_contacto__form .container_form__area.invalid {
+  border: 2px solid #ff0000;
+}
+.footer_content__footer .contacto__div .form_contacto__form .container_form__area.checked {
+  border-bottom: 3px solid #FF9143;
+}
+.footer_content__footer .contacto__div .form_contacto__form .container_form__area .message_form__textarea {
+  min-height: 110px;
+  max-width: 100%;
+  padding: 0;
+  padding-top: calc(8px + 1.5rem);
+  padding-left: 12px;
+  font-family: Raleway, sans-serif;
+  font-size: 1rem;
+  caret-color: #FF9143;
+  resize: vertical;
+  border: 0;
+}
+.footer_content__footer .contacto__div .form_contacto__form .container_form__area .message_form__textarea:focus + .label_form_area__label {
+  outline: none;
+  animation: move_placeholder_textarea 0.1s ease-in-out forwards;
+}
+.footer_content__footer .contacto__div .form_contacto__form .container_form__area .message_form__textarea:not(:focus) + .label_form_area__label.is-active {
+  color: #696969 !important;
+  animation: move_placeholder_textarea 0.1s ease-in-out forwards;
+}
+.footer_content__footer .contacto__div .form_contacto__form .container_form__area .message_form__textarea:not(:focus) + .label_form_area__label {
+  animation: reset_placeholder_textarea 0.1s ease-in-out forwards;
+}
+.footer_content__footer .contacto__div .form_contacto__form .container_form__area .label_form_area__label {
+  padding-left: 10px;
+  font-size: 1.3rem;
+  position: absolute;
+  top: 10px;
+  left: 0;
+  user-select: none;
+  transform: translateY(10px);
+}
+.footer_content__footer .contacto__div .form_contacto__form .container_form__area .label_form_area__label.checked.contain_text {
+  color: #696969 !important;
+}
+.footer_content__footer .contacto__div .form_contacto__form .form_footer_container__div {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+.footer_content__footer .contacto__div .form_contacto__form .form_footer_container__div .to_app_mail__link {
+  text-decoration: underline;
+}
+@media screen and (max-width: 539px) {
+  .footer_content__footer .contacto__div .form_contacto__form .form_footer_container__div {
+    flex-direction: column;
+  }
+  .footer_content__footer .contacto__div .form_contacto__form .form_footer_container__div > .body-medium {
+    margin-top: 0.5rem;
+  }
+}
+
+.errorr_message__span {
+  display: none;
+}
+
+.errorr_message__span.show_error {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  bottom: -25px;
+  left: 1px;
+}
+
+.errorr_message__span .message_error__p {
+  color: #ff0000;
+}
+
+.footer_content__footer .author_date__h2 {
+  padding: 32px;
+}
+
+@keyframes move_placeholder {
+  0% {
+    transform: translateY(50%);
+    font-size: 1.3rem;
+    color: #696969;
+  }
+  100% {
+    transform: translateY(-25%);
+    font-size: 1rem;
+    color: #FF9143;
+  }
+}
+@keyframes reset_placeholder {
+  0% {
+    transform: translateY(-25%);
+    font-size: 1rem;
+    color: #FF9143;
+  }
+  100% {
+    transform: translateY(50%);
+    font-size: 1.3rem;
+    color: #696969;
+  }
+}
+@keyframes move_placeholder_textarea {
+  0% {
+    top: 10px;
+    transform: translateY(10px);
+    font-size: 1.3rem;
+    color: #696969;
+  }
+  100% {
+    top: 5px;
+    font-size: 1rem;
+    transform: translateY(5px);
+    color: #FF9143;
+  }
+}
+@keyframes reset_placeholder_textarea {
+  0% {
+    top: 10px;
+    font-size: 1rem;
+    transform: translateY(10px);
+    color: #FF9143;
+  }
+  100% {
+    top: 15px;
+    transform: translateY(15px);
+    font-size: 1.3rem;
+    color: #696969;
+  }
+}
 button.button {
   display: flex;
   justify-content: center;
@@ -359,7 +574,7 @@ button .icon.arrow_right__i {
   height: 20px;
 }
 
-/* Sections */
+/* components */
 main {
   position: relative;
   width: 100%;
