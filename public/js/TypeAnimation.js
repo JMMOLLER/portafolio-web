@@ -1,5 +1,24 @@
+/**
+ * Clase que realiza una animación de escritura de texto en un elemento del DOM.
+ *
+ * @class
+ * @export
+ * @default
+ */
 export default class TypeAnimation {
 
+    /**
+   * Crea una instancia de la clase TypeAnimation.
+   *
+   * @constructor
+   * @param {string} element - Selector del elemento del DOM en el que se realizará la animación.
+   * @param {Object} options - Opciones de configuración para la animación.
+   * @param {string[]} options.strings - Arreglo de cadenas de texto a escribir en la animación.
+   * @param {number} options.typeSpeed - Velocidad de escritura en milisegundos por caracter.
+   * @param {number} options.backSpeed - Velocidad de borrado en milisegundos por caracter.
+   * @param {number} options.delayBtwStrings - Tiempo de espera en milisegundos entre cadenas de texto.
+   * @param {boolean} options.loop - Indica si la animación debe repetirse en un bucle continuo.
+   */
     constructor(element, options) {
         this.element = document.querySelector(element);
         this.strings = options.strings;
@@ -10,6 +29,14 @@ export default class TypeAnimation {
         this.startTyping();
     }
 
+
+    /**
+   * Escribe el texto letra por letra en el elemento del DOM.
+   *
+   * @async
+   * @param {string} text - Texto a escribir.
+   * @returns {Promise} Promesa que se resuelve cuando se ha completado la escritura.
+   */
     async type(text) {
 
         return new Promise(resolve => {
@@ -26,6 +53,12 @@ export default class TypeAnimation {
         });
     }
 
+    /**
+   * Borra el texto gradualmente desde el final hasta el inicio en el elemento del DOM.
+   *
+   * @async
+   * @returns {Promise} Promesa que se resuelve cuando se ha completado el borrado.
+   */
     async untype() {
 
         return new Promise(resolve => {
@@ -43,6 +76,11 @@ export default class TypeAnimation {
         });
     }
 
+    /**
+   * Inicia la animación de escritura.
+   *
+   * @async
+   */
     async startTyping() {
         this.element.textContent = '';
         while (true) {
