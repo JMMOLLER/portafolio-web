@@ -36,7 +36,8 @@
     }
 
     .profile__img {
-        max-width: 50%;
+        width: 30%;
+        min-width: 220px;
         height: auto;
         border-radius: 30px;
         order: 0;
