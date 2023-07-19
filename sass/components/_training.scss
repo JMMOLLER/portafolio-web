@@ -1,0 +1,136 @@
+.training__section {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    padding-bottom: 200px;
+    gap: 90px;
+
+    .training_items_container__div {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 27px;
+        
+        .training_item__div {
+            min-width: 550px;
+            min-height: 360px;
+            display: flex;
+            flex-direction: column;
+            padding: 0 50px;
+            margin-bottom: 67px;
+            gap: 32px;
+
+            .to_certificate__link {
+                position: relative;
+                height: 70%;
+                width: 100%;
+
+                .screenshot__div {
+                    width: 100%;
+                    height: 100%;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                    margin: auto;
+                }
+
+                &.coderhouse {
+                    background-color: #000000;
+                    .screenshot__div{
+                        background-image: url("../assets/imgs/coderhouse.webp");
+                    }
+                    .text_to_certificate__span {
+                        color: $white;
+                    }
+                }
+
+                &.alura {
+                    background-color: $white;
+                    .screenshot__div{
+                        background-image: url("../assets/imgs/alura.webp");
+                    }
+                    .text_to_certificate__span {
+                        color: $dark-grey;
+                    }
+                }
+
+                &.mongodb {
+                    background-color: $white;
+                    .screenshot__div{
+                        background-image: url("../assets/imgs/mongodb.webp");
+                    }
+                    .text_to_certificate__span {
+                        color: $dark-grey;
+                    }
+                }  
+                
+                &.ibm {
+                    background-color: $white;
+                    .screenshot__div{
+                        background-image: url("../assets/imgs/ibm.webp");
+                    }
+                    .text_to_certificate__span {
+                        color: $dark-grey;
+                    }
+                }
+
+                &:hover {
+                    .text_to_certificate__span {
+                        max-height: 100%;
+                    }
+                }
+                
+                .text_to_certificate__span {
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    color: $white;
+                    backdrop-filter: blur(7px);
+                    top: 0;
+
+                    -webkit-transition: max-height .7s; 
+                    -moz-transition: max-height .7s; 
+                    -ms-transition: max-height .7s; 
+                    -o-transition: max-height .7s; 
+                    transition: max-height .7s;
+                    overflow: hidden;
+                    max-height: 0;
+                }
+            }
+
+
+            .footer_item__div {
+                display: flex;
+                flex-direction: column;
+                gap: 32px;
+
+                .description_container__div {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 8px;
+
+                    .description_item__div {
+                        display: flex;
+                        gap: 8px;
+                    }
+                }
+            }
+
+            @media screen and (max-width: 599px) {
+                min-width: 100%;
+            }
+        }
+    }
+
+    .to_projects__link {
+        .view_projects__button {
+            min-width: 241px;
+            min-height: 65px;
+            border: $brand-color 1px solid;
+        }
+    }
+}

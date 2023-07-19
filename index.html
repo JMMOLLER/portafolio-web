@@ -1,306 +1,458 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./public/css/reset.css">
-    <link rel="stylesheet" href="./public/css/layouts/header.css">
-    <link rel="stylesheet" href="./public/css/layouts/footer.css">
-    <link rel="stylesheet" href="./public/css/style.css">
-    <link rel="stylesheet" href="./public/css/components/hero.css">
-    <link rel="stylesheet" href="./public/css/components/sobre.css">
-    <link rel="stylesheet" href="./public/css/components/skills_hobbies.css">
-    <link rel="stylesheet" href="./public/css/components/formacion.css">
-    <link rel="stylesheet" href="./public/css/components/proyectos.css">
-    <title>Portafolio - Jorge Moreno</title>
+    <link rel="shortcut icon" href="./public/assets/icons/logo.svg" type="image/x-icon">
+    <link type="text/css" rel="stylesheet" href="./public/css/style.css">
+
+    <!-- Primary Meta Tags -->
+    <title>Jorge Moreno - Portafolio Web</title>
+    <meta name="title" content="Jorge Moreno - Portafolio Web" />
+    <meta name="description" content="Soy desarrollador web e Ing. de Software con experiencia en Front-end y Back-end. Explora mi portafolio para ver algunos de mis proyectos y habilidades en acción." />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://portafolio-jlmm.vercel.app" />
+    <meta property="og:title" content="Jorge Moreno - Portafolio Web" />
+    <meta property="og:description" content="Soy desarrollador web e Ing. de Software con experiencia en Front-end y Back-end. Explora mi portafolio para ver algunos de mis proyectos y habilidades en acción." />
+    <meta property="og:image" content="https://portafolio-jlmm.vercel.app/public/assets/imgs/profile.webp" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://portafolio-jlmm.vercel.app" />
+    <meta property="twitter:title" content="Jorge Moreno - Portafolio Web" />
+    <meta property="twitter:description" content="Soy desarrollador web e Ing. de Software con experiencia en Front-end y Back-end. Explora mi portafolio para ver algunos de mis proyectos y habilidades en acción." />
+    <meta property="twitter:image" content="https://portafolio-jlmm.vercel.app/public/assets/imgs/profile.webp" />
 </head>
+
 <body>
-    <header class="header">
-        <div class="container_left__div">
-            <img src="./public/assets/imgs/auto_awesome_black.png" alt="imagen logo" class="logo__img">
-            <p class="fullname__p">Jorge Luis Moreno</p>
-        </div>
-        <div class="container_middle__div">
-            <nav class="container_list__nav">
-                <ul class="container_list__ul">
-                    <li class="container_list__li"><a href="#about_me" class="link_list__a">Sobre mi</a></li>
-                    <li class="container_list__li"><a href="#skills" class="link_list__a">Skills</a></li>
-                    <li class="container_list__li"><a href="#hobbies" class="link_list__a">Hobbies</a></li>
-                    <li class="container_list__li"><a href="#training" class="link_list__a">Formación</a></li>
-                    <li class="container_list__li"><a href="#contact" class="link_list__a">Contacto</a></li>
+
+    <header>
+        <img src="./public/assets/icons/logo.svg" alt="imagen logo" class="logo__img">
+        <div class="container_right__div desktop">
+            <nav class="navbar">
+                <ul class="menu">
+                    <li class="menu__item">
+                        <a href="#home" class="menu__link id__link body-medium">inicio</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="#about_me" class="menu__link id__link body-medium">sobre mi</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="#training" class="menu__link id__link body-medium">mi formación</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="#skills" class="menu__link id__link body-medium">mis habilidades</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="#projects" class="menu__link id__link body-medium">mis proyectos</a>
+                    </li>
                 </ul>
             </nav>
+            <a href="#contact" class="to_email__link id__link"><button type="button" class="button header__button">Contáctame</button></a>
         </div>
-        <div class="container_right__div">
-            <a href="mailto:jlmm.jlmm76@gmail.com" class="email__a">jlmm.jlmm76@gmail.com</a>
+        <div class="container_right__div mobile">
+            <!-- toggle -->
+            <button type="button" class="toggle navbar__burger" title="toggle navbar">
+                <div class="toggle__line"></div>
+                <div class="toggle__line"></div>
+                <div class="toggle__line"></div>
+            </button>
+            <nav class="navbar">
+                <ul class="menu">
+                    <li class="menu__item">
+                        <a href="#home" class="menu__link id__link body-medium">inicio</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="#about_me" class="menu__link id__link body-medium">sobre mi</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="#training" class="menu__link id__link body-medium">mi formación</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="#skills" class="menu__link id__link body-medium">mis habilidades</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="#projects" class="menu__link id__link body-medium">mis proyectos</a>
+                    </li>
+                </ul>
+            </nav>
+            <a href="#contact" class="to_email__link id__link"><button type="button" class="button header__button">Contáctame</button></a>
         </div>
     </header>
+    
     <main>
-        <section class="hero__section">
-            <img src="./public/assets/imgs/profile.jpg" alt="imagen perfil" class="hero__img">
-            <h1 class="hero_title__h1">Hola, <br> mi nombre es Jorge Luis Moreno Moller y soy <span id="toType">Desarrollador Fullstack</span></h1>
-            <div class="hero_subtitle__div">
-                <p class="hero_subtitle__p">Soy apasionado por el desarrollo Frontend y Backend. Poseo conocimientos en diversas tecnologías y estoy familiarizado con metodologías ágiles. Mi objetivo es ofrecer soluciones innovadoras y de calidad, adaptándome rápidamente a los cambios del entorno tecnológico.</p>
-                <div class="container_link__div">
-                    <a class="link__a" href="https://github.com/JMMOLLER" target="_blank">Github <i class="arrow_back"></i></a>
-                    <a class="link__a" href="https://www.linkedin.com/in/jorge-luis-moreno-moller-71207218a" target="_blank">Linkedin <i class="arrow_back"></i></a>
-                </div>
-            </div>
+        <div class="container_vector__div">
+            <svg xmlns="http://www.w3.org/2000/svg" width="917" height="651" viewBox="0 0 917 651" fill="none">
+                <g filter="url(#filter0_f_101_462)">
+                  <path d="M485.187 449.805C580.282 443.548 642.347 408.446 702.715 326.776C825.011 161.329 110.485 108.772 209.995 290.534C272.738 405.139 363.72 457.796 485.187 449.805Z" fill="white" fill-opacity="0.18"/>
+                </g>
+                <defs>
+                  <filter id="filter0_f_101_462" x="0.454948" y="-23.6465" width="916.391" height="674.24" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                    <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                    <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+                    <feGaussianBlur stdDeviation="100" result="effect1_foregroundBlur_101_462"/>
+                  </filter>
+                </defs>
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="917" height="651" viewBox="0 0 917 651" fill="none">
+                <g filter="url(#filter0_f_101_462)">
+                  <path d="M485.187 449.805C580.282 443.548 642.347 408.446 702.715 326.776C825.011 161.329 110.485 108.772 209.995 290.534C272.738 405.139 363.72 457.796 485.187 449.805Z" fill="white" fill-opacity="0.18"/>
+                </g>
+                <defs>
+                  <filter id="filter0_f_101_462" x="0.454948" y="-23.6465" width="916.391" height="674.24" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                    <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                    <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+                    <feGaussianBlur stdDeviation="100" result="effect1_foregroundBlur_101_462"/>
+                  </filter>
+                </defs>
+            </svg>
+        </div>
+        <section class="hero__section" id="home">
+            <h1 class="title__main">Mi Pasión es ser <span id="toType"></span></h1>
+            <a href="#about_me" class="to_about__link id__link">
+                <button type="button" class="button fill-orange works_hero__button">
+                    Ver Información
+                    <i class="icon arrow_right__i"></i>
+                </button>
+            </a>
         </section>
-        <section class="sobre__section" id="about_me">
-            <div class="container_sobre__div">
-                <h2 class="title_sobre__h2">Sobre mi</h2>
-                <p class="sobre__p">
-                    Soy estudiante de la carrera Ingeniería de Software en la universidad UTP. Soy dedicado en mis estudios y en los proyectos que he realizado. Además, tengo experiencia en el desarrollo de software, conozco tecnologías, métodos y patrones de desarrollo. Mi meta es convertirme en un <strong>Desarrollador Fullstack</strong> altamente capacitado.
-                    <br><br>
-                    Durante el año 2023, adquirí conocimientos en el desarrollo Frontend y he estado trabajando en proyectos relacionados con esta área. Desde el año 2022, también tengo experiencia en el manejo del Backend. Sin embargo, estoy consciente de que la industria de la tecnología evoluciona rápidamente y constantemente surgen nuevas tecnologías. Estoy comprometido en dominar las más importantes y mantenerme informado sobre las últimas tendencias, con el objetivo de ser un Desarrollador Fullstack destacado.
-                    <br><br>
-                    Además, poseo habilidades de trabajo en equipo, resolución de problemas y comunicación efectiva. Estoy dispuesto a enfrentar desafíos y aprender de ellos, ya que considero que la mejora continua es fundamental en mi crecimiento profesional.
+        <section class="about__section" id="about_me">
+            <div class="content_left__div">
+                <h2 class="title_about__div">Empecemos conociéndome un poco</h2>
+                <p class="body-large">
+                    Hola, mi nombre es Jorge y soy un desarrollador backend en busca de convertirme en un desarrollador fullstack. Cuento con estudios y certificados en distintos institutos, los cuales avalan mis conocimientos y experiencias en el campo del desarrollo de software. Mi objetivo es ampliar mis habilidades y conocimientos para abarcar tanto el frontend como el backend, brindando soluciones integrales y versátiles a los proyectos en los que participo. Estoy comprometido con el aprendizaje continuo y la mejora constante, siempre dispuesto a enfrentar nuevos desafíos y contribuir al éxito de los equipos de desarrollo.
                 </p>
-                <div class="signature__div"></div>
+                <a href="#training" class="to_training__link id__link">
+                    <button type="button" class="button fill-orange view_training__button">Ver Formación</button>
+                </a>
             </div>
+            <img src="./public/assets/imgs/profile_grey.jpg" alt="" class="profile__img">
         </section>
+        <hr>
+        <section class="training__section" id="training">
+            <h2 class="title_training__h2">Mi Formación</h2>
+            <div class="training_items_container__div">
+                <div class="training_item__div">
+                    <a href="#" class="to_certificate__link coderhouse">
+                        <div class="screenshot__div "></div>
+                        <span class="text_to_certificate__span body-large">Ver Certificado</span>
+                    </a>
+                    <div class="footer_item__div">
+                        <h4 class="title_footer_item__h4">Programación Backend</h4>
+                        <div class="description_container__div">
+                            <div class="description_item__div">
+                                <p class="body-medium provider_title__p">Proveedor:</p>
+                                <p class="body-basic provider_info__p">CoderHouse</p>
+                            </div>
+                            <div class="description_item__div">
+                                <p class="body-medium skills_title__p">Skills:</p>
+                                <p class="body-basic skills_info__p">
+                                    ExpressJs, MongoDB, Passport, +11.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="training_item__div">
+                    <a href="#" class="to_certificate__link alura">
+                        <div class="screenshot__div"></div>
+                        <span class="text_to_certificate__span body-large">Ver Certificado</span>
+                    </a>
+                    <div class="footer_item__div">
+                        <h4 class="title_footer_item__h4">Formación Frontend</h4>
+                        <div class="description_container__div">
+                            <div class="description_item__div">
+                                <p class="body-medium provider_title__p">Proveedor:</p>
+                                <p class="body-basic provider_info__p">Alura</p>
+                            </div>
+                            <div class="description_item__div">
+                                <p class="body-medium skills_title__p">Skills:</p>
+                                <p class="body-basic skills_info__p">
+                                    HTML, CSS, JS, ReactJs, 22+.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="training_item__div">
+                    <a href="#" class="to_certificate__link mongodb">
+                        <div class="screenshot__div"></div>
+                        <span class="text_to_certificate__span body-large">Ver Certificado</span>
+                    </a>
+                    <div class="footer_item__div">
+                        <h4 class="title_footer_item__h4">Associate Developer Node.js</h4>
+                        <div class="description_container__div">
+                            <div class="description_item__div">
+                                <p class="body-medium provider_title__p">Proveedor:</p>
+                                <p class="body-basic provider_info__p">MongoDB</p>
+                            </div>
+                            <div class="description_item__div">
+                                <p class="body-medium skills_title__p">Skills:</p>
+                                <p class="body-basic skills_info__p">
+                                    MongoDB, Transactions, Aggregation, +17.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="training_item__div">
+                    <a href="#" class="to_certificate__link coderhouse">
+                        <div class="screenshot__div "></div>
+                        <span class="text_to_certificate__span body-large">Ver Certificado</span>
+                    </a>
+                    <div class="footer_item__div">
+                        <h4 class="title_footer_item__h4">Desarrollo Web</h4>
+                        <div class="description_container__div">
+                            <div class="description_item__div">
+                                <p class="body-medium provider_title__p">Proveedor:</p>
+                                <p class="body-basic provider_info__p">CoderHouse</p>
+                            </div>
+                            <div class="description_item__div">
+                                <p class="body-medium skills_title__p">Skills:</p>
+                                <p class="body-basic skills_info__p">
+                                    HTML, CSS, SASS, SEO, +7.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="training_item__div">
+                    <a href="#" class="to_certificate__link ibm">
+                        <div class="screenshot__div "></div>
+                        <span class="text_to_certificate__span body-large">Ver Certificado</span>
+                    </a>
+                    <div class="footer_item__div">
+                        <h4 class="title_footer_item__h4">Python 101 for Data Science</h4>
+                        <div class="description_container__div">
+                            <div class="description_item__div">
+                                <p class="body-medium provider_title__p">Proveedor:</p>
+                                <p class="body-basic provider_info__p">IBM</p>
+                            </div>
+                            <div class="description_item__div">
+                                <p class="body-medium skills_title__p">Skills:</p>
+                                <p class="body-basic skills_info__p">
+                                    Python, Data Science, Pandas.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a href="#projects" class="to_projects__link id__link">
+                <button type="button" class="button view_projects__button">Ver Proyectos<i class="icon arrow_right__i"></i></button>
+            </a>
+        </section>
+        <hr>
         <section class="skills__section" id="skills">
-            <h2 class="title_skills__h2">Skills</h2>
-            <div class="container_skills__div">
-                <div class="content_skills__div">
-                    <div class="container_icon__div html"></div>
-                    <p class="skills__p">HTML5</p>
+            <h2 class="title_skills__h3">Mis Habilidades</h2>
+            <div class="skills_container__div">
+                <div class="skill_item_container__div">
+                    <div class="image_item__div css"></div>
+                    <p class="body-large title_skill_item__p">CSS</p>
                 </div>
-                <div class="content_skills__div">
-                    <div class="container_icon__div css"></div>
-                    <p class="skills__p">CSS3</p>
+                <div class="skill_item_container__div">
+                    <div class="image_item__div django"></div>
+                    <p class="body-large title_skill_item__p">Django</p>
                 </div>
-                <div class="content_skills__div">
-                    <div class="container_icon__div js"></div>
-                    <p class="skills__p">Javascript</p>
+                <div class="skill_item_container__div">
+                    <div class="image_item__div express"></div>
+                    <p class="body-large title_skill_item__p">ExpressJs</p>
                 </div>
-                <div class="content_skills__div">
-                    <div class="container_icon__div react"></div>
-                    <p class="skills__p">ReactJS</p>
+                <div class="skill_item_container__div">
+                    <div class="image_item__div html"></div>
+                    <p class="body-large title_skill_item__p">HTML</p>
                 </div>
-                <div class="content_skills__div">
-                    <div class="container_icon__div node"></div>
-                    <p class="skills__p">Nodejs</p>
+                <div class="skill_item_container__div">
+                    <div class="image_item__div js"></div>
+                    <p class="body-large title_skill_item__p">JavaScript</p>
                 </div>
-                <div class="content_skills__div">
-                    <div class="container_icon__div express"></div>
-                    <p class="skills__p">ExpressJS</p>
+                <div class="skill_item_container__div">
+                    <div class="image_item__div mongodb"></div>
+                    <p class="body-large title_skill_item__p">MongoDB</p>
                 </div>
-                <div class="content_skills__div">
-                    <div class="container_icon__div mongodb"></div>
-                    <p class="skills__p">MongoDB</p>
+                <div class="skill_item_container__div">
+                    <div class="image_item__div node"></div>
+                    <p class="body-large title_skill_item__p">NodeJs</p>
+                </div>
+                <div class="skill_item_container__div">
+                    <div class="image_item__div python"></div>
+                    <p class="body-large title_skill_item__p">Python</p>
+                </div>
+                <div class="skill_item_container__div">
+                    <div class="image_item__div react"></div>
+                    <p class="body-large title_skill_item__p">React</p>
+                </div>
+                <div class="skill_item_container__div">
+                    <div class="image_item__div sass"></div>
+                    <p class="body-large title_skill_item__p">Sass</p>
+                </div>
+                <div class="skill_item_container__div">
+                    <div class="image_item__div sql"></div>
+                    <p class="body-large title_skill_item__p">SQL</p>
                 </div>
             </div>
         </section>
-        <section class="hobbies__section" id="hobbies">
-            <h2 class="title_hobbies__h2">Hobbies</h2>
-            <div class="container_hobbies__div">
-
-                <div class="content_hobbies__div">
-                    <div class="container_icon__div headphones"></div>
-                    <p class="hobbies__p">Oír música</p>
-                </div>
-
-                <div class="content_hobbies__div">
-                    <div class="container_icon__div tv"></div>
-                    <p class="hobbies__p">Ver series</p>
-                </div>
-
-                <div class="content_hobbies__div">
-                    <div class="container_icon__div forkspoon"></div>
-                    <p class="hobbies__p">Cocinar</p>
-                </div>
-
-                <div class="content_hobbies__div">
-                    <div class="container_icon__div book"></div>
-                    <p class="hobbies__p">Leer</p>
-                </div>
-
-            </div>
-        </section>
-        <section class="formacion__section" id="training">
-            <h2 class="title_formacion__h2">Formación académica</h2>
-            <div class="experiences_container__div">
-
-                <div class="content_experience__div">
-                    <a href="#" class="link_experiences__link">
-                        <img src="./public/assets/imgs/alura.webp" alt="" class="experience__img">
-                    </a>
-                    <div class="experiencie_description__div">
-                        <h3 class="title_description__h3">Formación Frontend</h3>
-                        <p class="description_date__p">Actualidad - Alura</p>
-                    </div>
-                </div>
-
-                <div class="content_experience__div">
-                    <a href="#" class="link_experiences__link dark">
-                        <img src="./public/assets/imgs/coderhouse.webp" alt="logo coderhouse" class="experience__img">
-                    </a>
-                    <div class="experiencie_description__div">
-                        <h3 class="title_description__h3">Programación Backend</h3>
-                        <p class="description_date__p">2023 - CoderHouse</p>
-                    </div>
-                </div>
-
-                <div class="content_experience__div">
-                    <a href="#" class="link_experiences__link">
-                        <img src="./public/assets/imgs/ibm.webp" alt="" class="experience__img">
-                    </a>
-                    <div class="experiencie_description__div">
-                        <h3 class="title_description__h3">Python 101 for Data Science</h3>
-                        <p class="description_date__p">2022 - IBM</p>
-                    </div>
-                </div>
-
-                <div class="content_experience__div">
-                    <a href="#" class="link_experiences__link green">
-                        <img src="./public/assets/imgs/MongoDB.webp" alt="" class="experience__img">
-                    </a>
-                    <div class="experiencie_description__div">
-                        <h3 class="title_description__h3">Associate Developer Node.js</h3>
-                        <p class="description_date__p">Actualidad - MongoDB</p>
-                    </div>
-                </div>
-
-                <div class="content_experience__div">
-                    <a href="#" class="link_experiences__link dark">
-                        <img src="./public/assets/imgs/coderhouse.webp" alt="logo coderhouse" class="experience__img">
-                    </a>
-                    <div class="experiencie_description__div">
-                        <h3 class="title_description__h3">Desarrollo Web</h3>
-                        <p class="description_date__p">2023 - CoderHouse</p>
-                    </div>
-                </div>
-
-            </div>
-        </section>
+        <hr>
         <section class="projects__section" id="projects">
-            <h2 class="title_project__h2">Experiencia profesional</h2>
-            <div class="projects_container__div">
-                
-                <div class="content_project__div">
-                    <div class="container_project__img">
-                        <img src="./public/assets/imgs/encriptador_texto.png" alt="imagen encriptador de texto" class="project__img">
+            <h2 class="title_projects__div">Experiencia profesional</h2>
+            <div class="projects_items_container__div">
+                <div class="projects_item__div">
+                    <div class="container_image__div encriptador">
+                        <div class="screenshot__div"></div>
                     </div>
-                    <div class="project_description__div">
-                        <h3 class="title_description__h3">Encriptador de texto</h3>
-                        <p class="description_info__p">Challenge Oracle</p>
-                        <div class="container_buttons__div">
-                            <a href="https://github.com/JMMOLLER/Alura-Desafio01" target="_blank" class="link_repo__link">
-                                <button class="repositorio__button">
-                                    Repositório
-                                </button>
-                            </a>
-                            <a href="https://jmmoller.github.io/Alura-Desafio01" target="_blank" class="link_project__link">
-                                <button class="show_demo__button">
-                                    Ver demo
-                                </button>
-                            </a>
+                    <div class="footer_item__div">
+                        <h4 class="title_footer_item__h4">Encriptador de Texto</h4>
+                        <div class="description_container__div">
+                            <div class="description_item__div">
+                                <p class="body-medium provider_title__p">Tipo:</p>
+                                <p class="body-basic provider_info__p">Desafío Alura</p>
+                            </div>
+                            <div class="description_item__div">
+                                <p class="body-medium skills_title__p">Tecnologías:</p>
+                                <p class="body-basic skills_info__p">
+                                    HTML, CSS, JS.
+                                </p>
+                            </div>
+                            <div class="description_item__div">
+                                <p class="body-medium description_title__p">Descripción:</p>
+                                <p class="body-basic description_info__p">
+                                    Durante mi tiempo de estudio en Alura, me enfrenté a un emocionante desafío: crear un encriptador de texto utilizando únicamente las tecnologías frontend que había aprendido, como JavaScript, HTML y CSS. Este proyecto me permitió poner en práctica mis conocimientos y habilidades en el desarrollo frontend, demostrando mi capacidad para crear una herramienta básica pero funcional. <br><br>
+                                    Este proyecto me permitió fortalecer mis habilidades en el desarrollo frontend y consolidar mis conocimientos en JavaScript, HTML y CSS. Además, me brindó una comprensión más profunda de la lógica de programación y la importancia de la seguridad en la transmisión de información.
+                                </p>
+                            </div>
+                            <div class="buttons_container__div">
+                                <a href="https://github.com/JMMOLLER/Alura-Desafio01" target="_blank" class="to_repository__link">
+                                    <button type="button" class="button border-orange view_repository__button">Ver Repositorio<i class="icon arrow_right_up__i"></i></button>
+                                </a>
+                                <a href="https://jmmoller.github.io/Alura-Desafio01" target="_blank" class="to_page__link">
+                                    <button type="button" class="button border-orange go_page__button">Ir a la Página<i class="icon arrow_right_up__i"></i></button>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
-
-                <div class="content_project__div">
-                    <div class="container_project__img">
-                        <img src="./public/assets/imgs/tienda_tuya.png" alt="imagen eCommerce TiendaTuya" class="project__img">
+                <div class="projects_item__div">
+                    <div class="container_image__div tienda-tuya">
+                        <div class="screenshot__div"></div>
                     </div>
-                    <div class="project_description__div">
-                        <h3 class="title_description__h3">eCommerce TiendaTuya</h3>
-                        <p class="description_info__p">Proyecto CoderHouse Backend</p>
-                        <div class="container_buttons__div">
-                            <a href="https://github.com/JMMOLLER/Proyecto_Final_CoderHouse-Backend" target="_blank" class="link_repo__link">
-                                <button type="button" class="repositorio__button">
-                                    Repositório
-                                </button>
-                            </a>
-                            <a href="https://tienda-tuya.onrender.com" target="_blank" class="link_project__link">
-                                <button type="button" class="show_demo__button">
-                                    Ver demo
-                                </button>
-                            </a>
+                    <div class="footer_item__div">
+                        <h4 class="title_footer_item__h4">Tienda Tuya</h4>
+                        <div class="description_container__div">
+                            <div class="description_item__div">
+                                <p class="body-medium provider_title__p">Tipo:</p>
+                                <p class="body-basic provider_info__p">Desafío CoderHouse</p>
+                            </div>
+                            <div class="description_item__div">
+                                <p class="body-medium skills_title__p">Tecnologías:</p>
+                                <p class="body-basic skills_info__p">
+                                    JavaScript, ExpressJs, Passport, MongoDB, +8.
+                                </p>
+                            </div>
+                            <div class="description_item__div">
+                                <p class="body-medium description_title__p">Descripción:</p>
+                                <p class="body-basic description_info__p">
+                                    Durante mi participación en el curso de Programación Backend de CoderHouse, me enfrenté a un desafío apasionante: crear una tienda online desde cero utilizando las tecnologías que había aprendido a lo largo del programa. Este proyecto me permitió aplicar mis conocimientos y habilidades en el desarrollo backend, así como consolidar mis habilidades en programación. <br><br>
+                                    Durante el proceso, implementé funcionalidades como la visualización de productos, el carrito de compras, el proceso de pago y la gestión de pedidos. Además, me aseguré de que la tienda fuera segura y robusta, aplicando medidas de protección de datos y validación de formularios.
+                                    <br><br>
+                                    Este proyecto me permitió enfrentarme a los desafíos del desarrollo backend en un contexto realista, y me proporcionó una experiencia valiosa en la construcción de aplicaciones web completas. Estoy orgulloso del resultado alcanzado y emocionado por seguir mejorando mis habilidades en el campo del desarrollo backend.
+                                </p>
+                            </div>
+                            <div class="buttons_container__div">
+                                <a href="https://github.com/JMMOLLER/Proyecto_Final_CoderHouse-Backend" target="_blank" class="to_repository__link">
+                                    <button type="button" class="button border-orange view_repository__button">Ver Repositorio<i class="icon arrow_right_up__i"></i></button>
+                                </a>
+                                <a href="https://tienda-tuya.onrender.com" target="_blank" class="to_page__link">
+                                    <button type="button" class="button border-orange go_page__button">Ir a la Página<i class="icon arrow_right_up__i"></i></button>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
-
-                <div class="content_project__div">
-                    <div class="container_project__img">
-                        <img src="./public/assets/imgs/solym_web.png" alt="imagen proyecto Solym" class="project__img">
-                    </div>
-                    <div class="project_description__div">
-                        <h3 class="title_description__h3">Solym Web</h3>
-                        <p class="description_info__p">Proyecto personal</p>
-                        <div class="container_buttons__div">
-                            <a href="https://github.com/JMMOLLER/Solym-Web" target="_blank" class="link_repo__link">
-                                <button type="button" class="repositorio__button">
-                                    Repositório
-                                </button>
-                            </a>
-                            <a href="https://solym.vercel.app" target="_blank" class="link_project__link">
-                                <button type="button" class="show_demo__button">
-                                    Ver demo
-                                </button>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
             </div>
         </section>
     </main>
-    <footer class="footer_content__footer" id="contact">
-        <div class="contacto__div">
-            <h3 class="title_contacto__h3">Contacto</h3>
-            <p class="text_contacto__p">¿Quieres contactarme?<br>Complete el siguiente formulario y me pondré en contacto con usted lo antes posible.</p>
+    <footer class="footer_content__footer">
+        <div class="contacto__div" id="contact">
+            <div class="container_header_footer_contact__div">
+                <hr>
+                <h4 class="title_footer_contact__h4">Ponte en contacto conmigo</h4>
+                <hr>
+            </div>
+            <p class="body-large text_contacto__p">¿Quieres contactarme?<br>Complete el siguiente formulario y me pondré en contacto con usted lo antes posible.</p>
             <form action="" method="post" class="form_contacto__form">
                 
                 <div class="container_form__input user_name">
-                    <label for="user_name" class="label_form_input__label user_name">Nombre</label>
-                    <input type="text" name="user_name" id="user_name" class="input_form__input" required>
-                    <span class="errorr_message__span user_name" role="alert">
+                    <input type="text" name="user_name" id="user_name" autocomplete="off" placeholder="Nombre" class="input_form__input" minlength="2" maxlength="30" pattern="[a-zA-ZáéíóúÁÉÍÓÚñÑ ]+" required>
+                    <label for="user_name" class="body-medium label_form_input__label">Nombre</label>
+                    <span class="errorr_message__span" role="alert">
                         <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="10" height="10" viewBox="0,0,256,256" style="fill:#000000;">
                             <g fill="#ff0000" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(10.66667,10.66667)"><path d="M9.365,13.055l-6.365,-1.813l1.196,-3.684l6.304,2.544l-0.405,-7.102h3.973l-0.405,7.245l6.142,-2.503l1.195,3.724l-6.486,1.811l4.257,5.419l-3.224,2.304l-3.689,-5.949l-3.649,5.745l-3.223,-2.2z"></path></g></g>
                         </svg>
-                        <p class="message_error__p user_name"></p>
-                    </span>
-                </div>
-                <div class="container_form__input user_email">
-                    <label for="user_email" class="label_form_input__label user_email">E-mail</label>
-                    <input type="email" name="user_email" id="user_email" class="input_form__input" required>
-                    <span class="errorr_message__span user_email" role="alert">
-                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="10" height="10" viewBox="0,0,256,256" style="fill:#000000;">
-                            <g fill="#ff0000" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(10.66667,10.66667)"><path d="M9.365,13.055l-6.365,-1.813l1.196,-3.684l6.304,2.544l-0.405,-7.102h3.973l-0.405,7.245l6.142,-2.503l1.195,3.724l-6.486,1.811l4.257,5.419l-3.224,2.304l-3.689,-5.949l-3.649,5.745l-3.223,-2.2z"></path></g></g>
-                        </svg>
-                        <p class="message_error__p user_email"></p>
-                    </span>
-                </div>
-                <div class="container_form__input subject">
-                    <label for="subject" class="label_form_input__label subject">Asunto</label>
-                    <input type="text" name="subject" id="subject" class="input_form__input" required>
-                    <span class="errorr_message__span subject" role="alert">
-                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="10" height="10" viewBox="0,0,256,256" style="fill:#000000;">
-                            <g fill="#ff0000" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(10.66667,10.66667)"><path d="M9.365,13.055l-6.365,-1.813l1.196,-3.684l6.304,2.544l-0.405,-7.102h3.973l-0.405,7.245l6.142,-2.503l1.195,3.724l-6.486,1.811l4.257,5.419l-3.224,2.304l-3.689,-5.949l-3.649,5.745l-3.223,-2.2z"></path></g></g>
-                        </svg>
-                        <p class="message_error__p subject"></p>
-                    </span>
-                </div>
-                <div class="container_form__area message_area">
-                    <label for="message_area" class="label_form_input__label message_area">Mensaje</label>
-                    <textarea name="mensaje_area" id="message_area" class="message_form__textarea" cols="38" rows="10" required></textarea>
-                    <span class="errorr_message__span message_area" role="alert">
-                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="10" height="10" viewBox="0,0,256,256" style="fill:#000000;">
-                            <g fill="#ff0000" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(10.66667,10.66667)"><path d="M9.365,13.055l-6.365,-1.813l1.196,-3.684l6.304,2.544l-0.405,-7.102h3.973l-0.405,7.245l6.142,-2.503l1.195,3.724l-6.486,1.811l4.257,5.419l-3.224,2.304l-3.689,-5.949l-3.649,5.745l-3.223,-2.2z"></path></g></g>
-                        </svg>
-                        <p class="message_error__p message_area"></p>
+                        <p class="body-medium message_error__p"></p>
                     </span>
                 </div>
 
-                <button type="submit" class="submit_form__button">Enviar mensaje</button>
+                <div class="container_form__input user_email">
+                    <input type="email" name="user_email" id="user_email" autocomplete="off" class="input_form__input" required>
+                    <label for="user_email" class="body-medium label_form_input__label">E-mail</label>
+                    <span class="errorr_message__span" role="alert">
+                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="10" height="10" viewBox="0,0,256,256" style="fill:#000000;">
+                            <g fill="#ff0000" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(10.66667,10.66667)"><path d="M9.365,13.055l-6.365,-1.813l1.196,-3.684l6.304,2.544l-0.405,-7.102h3.973l-0.405,7.245l6.142,-2.503l1.195,3.724l-6.486,1.811l4.257,5.419l-3.224,2.304l-3.689,-5.949l-3.649,5.745l-3.223,-2.2z"></path></g></g>
+                        </svg>
+                        <p class="body-medium message_error__p"></p>
+                    </span>
+                </div>
+
+                <div class="container_form__input subject">
+                    <input type="text" name="subject" id="subject" autocomplete="off" class="input_form__input" minlength="2" maxlength="30" pattern="[a-zA-ZáéíóúÁÉÍÓÚñÑ ]+" required>
+                    <label for="subject" class="body-medium label_form_input__label">Asunto</label>
+                    <span class="errorr_message__span" role="alert">
+                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="10" height="10" viewBox="0,0,256,256" style="fill:#000000;">
+                            <g fill="#ff0000" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(10.66667,10.66667)"><path d="M9.365,13.055l-6.365,-1.813l1.196,-3.684l6.304,2.544l-0.405,-7.102h3.973l-0.405,7.245l6.142,-2.503l1.195,3.724l-6.486,1.811l4.257,5.419l-3.224,2.304l-3.689,-5.949l-3.649,5.745l-3.223,-2.2z"></path></g></g>
+                        </svg>
+                        <p class="body-medium message_error__p"></p>
+                    </span>
+                </div>
+
+                <div class="container_form__area message_area">
+                    <textarea name="mensaje_area" id="message_area" class="message_form__textarea" cols="38" rows="10" minlength="10" maxlength="550" required></textarea>
+                    <label for="message_area" class="body-medium label_form_area__label">Mensaje</label>
+                    <span class="errorr_message__span" role="alert">
+                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="10" height="10" viewBox="0,0,256,256" style="fill:#000000;">
+                            <g fill="#ff0000" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(10.66667,10.66667)"><path d="M9.365,13.055l-6.365,-1.813l1.196,-3.684l6.304,2.544l-0.405,-7.102h3.973l-0.405,7.245l6.142,-2.503l1.195,3.724l-6.486,1.811l4.257,5.419l-3.224,2.304l-3.689,-5.949l-3.649,5.745l-3.223,-2.2z"></path></g></g>
+                        </svg>
+                        <p class="body-medium message_error__p"></p>
+                    </span>
+                </div>
+
+                <div class="form_footer_container__div">
+                    <button type="submit" class="button fill-orange submit_form__button" disabled>Enviar mensaje</button>
+                    <p class="body-medium">Ó</p>
+                    <a href="mailto:jlmm.jlmm76@gmail.com" class="body-medium to_app_mail__link">Enviar e-mail con una aplicación</a>
+                </div>
             </form>
         </div>
-        <h4 class="author_date__h2">Desarrollado por Jorge Moreno<br>2023</h4>
+        <div class="socials__footer">
+            <a href="https://www.linkedin.com/in/jorge-luis-moreno-moller-71207218a" target="_blank" class="socials_item__div linkedin">
+                <i class="icon linkedin__i"></i>
+            </a>
+            <a href="https://github.com/JMMOLLER" target="_blank" class="socials_item__div github">
+                <i class="icon github__i"></i>
+            </a>
+            <a href="https://github.com/JMMOLLER/Alura-Desafio02" target="_blank" class="socials_item__div repository">
+                <i class="icon repository__i"></i>
+            </a>
+        </div>
+        <div class="footer_content__div">
+            <p class="body-large">Desarrollado por Jorge Moreno</p>
+            <p class="body-medium">Todos los estilos son propios. Diseño recuperado de Figma Comunity.</p>
+        </div>
     </footer>
-    <script src="./public/js/TypeAnimation.js"></script>
-    <script src="./public/js/index.js"></script>
+
+    <script src="./public/js/index.js" type="module"></script>
 </body>
+
 </html>

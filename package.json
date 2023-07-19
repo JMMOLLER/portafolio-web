@@ -1,0 +1,16 @@
+{
+  "name": "Alura-Desafio02",
+  "version": "1.0.0",
+  "description": "Portfolio website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "node-sass": "node-sass --out-style expanded ./sass/main.scss ./public/css/style.css"
+  },
+  "keywords": [],
+  "author": "JMMOLLER",
+  "license": "ISC",
+  "dependencies": {
+    "sass": "^1.63.6"
+  }
+}

@@ -1,0 +1,113 @@
+@mixin property_logo {
+    width: 100%;
+    height: 50%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.skills__section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 {
+        top: 120px;
+        bottom: 250px
+    };
+
+    .skills_container__div {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 25px;
+        padding: 0 {
+            top: 50px;
+            left: 5%;
+            right: 5%;
+        };
+
+        .skill_item_container__div {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 200px;
+            height: 150px;
+            border: $white 1px solid;
+            transform: rotateX(90deg);
+            animation: rotate 1s ease-in-out forwards;
+            gap: 10px;
+
+            .image_item__div {
+                width: 100%;
+                height: 100%;
+
+                &.css {
+                    @include property_logo;
+                    background-image: url("../assets/icons/css-3.svg");
+                }
+                &.django {
+                    @include property_logo;
+                    background-image: url("../assets/icons/django.svg");
+                }
+                &.express {
+                    @include property_logo;
+                    background-image: url("../assets/icons/express-js.svg");
+                }
+                &.html {
+                    @include property_logo;
+                    background-image: url("../assets/icons/html-5.svg");
+                }
+                &.js {
+                    @include property_logo;
+                    background-image: url("../assets/icons/javascript.svg");
+                }
+                &.mongodb {
+                    @include property_logo;
+                    background-image: url("../assets/icons/mongodb.svg");
+                }
+                &.node {
+                    @include property_logo;
+                    background-image: url("../assets/icons/nodejs.svg");
+                }
+                &.python {
+                    @include property_logo;
+                    background-image: url("../assets/icons/python.svg");
+                }
+                &.react {
+                    @include property_logo;
+                    background-image: url("../assets/icons/react.svg");
+                }
+                &.sass {
+                    @include property_logo;
+                    background-image: url("../assets/icons/sass.svg");
+                }
+                &.sql {
+                    @include property_logo;
+                    background-image: url("../assets/icons/sql.svg");
+                }
+            }
+
+            .title_skill_item__p {
+                font-family: 'Rubik', sans-serif;
+                font-size: 16px;
+                font-weight: 500;
+                text-align: center;
+                color: $white;
+            }
+
+            @keyframes rotate {
+                from {
+                    transform: rotateX(90deg);
+                }
+
+                to {
+                    transform: rotateX(0deg);
+                }
+            }
+        }
+
+    }
+    @media screen and (max-width: 1050px) {
+        padding-top: 0;
+    }
+}
