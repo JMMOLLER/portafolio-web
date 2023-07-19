@@ -3,7 +3,7 @@ import {
     addEventListenerToLinks,
     addEventListenerToNavLinks,
     addEventListenerToInputs
-} from './navbar.js';
+} from './utils.js';
 
 new TypeAnimation('#toType', {
     strings: ['Ingeniero de Software', 'Desarrollador Frontend', 'Desarrollador Backend', 'Desarrollador Fullstack'],
