@@ -25,6 +25,10 @@ button.button.border-orange {
     border: $brand-color 1px solid;
     gap: 3px;
 
+    &:hover {
+        background-color: $brand-color;
+    }
+
     .icon.arrow_right_up__i {
         display: inline-block;
         background-image: url(../assets/icons/arrow-right.svg);

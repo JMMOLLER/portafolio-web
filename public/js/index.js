@@ -13,7 +13,7 @@ new TypeAnimation('#toType', {
     loop: true
 });
 
-addEventListenerToNavLinks(document.querySelector(".toggle.navbar__burger"), document.querySelector(".container_right__div.mobile"));
+addEventListenerToNavLinks(document.querySelector(".toggle.navbar__burger"));
 
 addEventListenerToLinks(document.querySelectorAll(".id__link"));
 

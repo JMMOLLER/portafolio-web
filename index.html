@@ -366,43 +366,46 @@
             <form action="" method="post" class="form_contacto__form">
                 
                 <div class="container_form__input user_name">
-                    <input type="text" name="user_name" id="user_name" autocomplete="off" placeholder="Nombre" class="input_form__input" required>
+                    <input type="text" name="user_name" id="user_name" autocomplete="off" placeholder="Nombre" class="input_form__input" minlength="2" maxlength="30" pattern="[a-zA-ZáéíóúÁÉÍÓÚñÑ ]+" required>
                     <label for="user_name" class="body-medium label_form_input__label">Nombre</label>
-                    <span class="errorr_message__span user_name" role="alert">
+                    <span class="errorr_message__span" role="alert">
                         <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="10" height="10" viewBox="0,0,256,256" style="fill:#000000;">
                             <g fill="#ff0000" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(10.66667,10.66667)"><path d="M9.365,13.055l-6.365,-1.813l1.196,-3.684l6.304,2.544l-0.405,-7.102h3.973l-0.405,7.245l6.142,-2.503l1.195,3.724l-6.486,1.811l4.257,5.419l-3.224,2.304l-3.689,-5.949l-3.649,5.745l-3.223,-2.2z"></path></g></g>
                         </svg>
-                        <p class="message_error__p user_name"></p>
+                        <p class="body-medium message_error__p"></p>
                     </span>
                 </div>
+
                 <div class="container_form__input user_email">
                     <input type="email" name="user_email" id="user_email" autocomplete="off" class="input_form__input" required>
                     <label for="user_email" class="body-medium label_form_input__label">E-mail</label>
-                    <span class="errorr_message__span user_email" role="alert">
+                    <span class="errorr_message__span" role="alert">
                         <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="10" height="10" viewBox="0,0,256,256" style="fill:#000000;">
                             <g fill="#ff0000" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(10.66667,10.66667)"><path d="M9.365,13.055l-6.365,-1.813l1.196,-3.684l6.304,2.544l-0.405,-7.102h3.973l-0.405,7.245l6.142,-2.503l1.195,3.724l-6.486,1.811l4.257,5.419l-3.224,2.304l-3.689,-5.949l-3.649,5.745l-3.223,-2.2z"></path></g></g>
                         </svg>
-                        <p class="message_error__p user_email"></p>
+                        <p class="body-medium message_error__p"></p>
                     </span>
                 </div>
+
                 <div class="container_form__input subject">
-                    <input type="text" name="subject" id="subject" autocomplete="off" class="input_form__input" required>
+                    <input type="text" name="subject" id="subject" autocomplete="off" class="input_form__input" minlength="2" maxlength="30" pattern="[a-zA-ZáéíóúÁÉÍÓÚñÑ ]+" required>
                     <label for="subject" class="body-medium label_form_input__label">Asunto</label>
-                    <span class="errorr_message__span subject" role="alert">
+                    <span class="errorr_message__span" role="alert">
                         <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="10" height="10" viewBox="0,0,256,256" style="fill:#000000;">
                             <g fill="#ff0000" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(10.66667,10.66667)"><path d="M9.365,13.055l-6.365,-1.813l1.196,-3.684l6.304,2.544l-0.405,-7.102h3.973l-0.405,7.245l6.142,-2.503l1.195,3.724l-6.486,1.811l4.257,5.419l-3.224,2.304l-3.689,-5.949l-3.649,5.745l-3.223,-2.2z"></path></g></g>
                         </svg>
-                        <p class="message_error__p subject"></p>
+                        <p class="body-medium message_error__p"></p>
                     </span>
                 </div>
+
                 <div class="container_form__area message_area">
-                    <textarea name="mensaje_area" id="message_area" class="message_form__textarea" cols="38" rows="10" required></textarea>
+                    <textarea name="mensaje_area" id="message_area" class="message_form__textarea" cols="38" rows="10" minlength="10" maxlength="550" required></textarea>
                     <label for="message_area" class="body-medium label_form_area__label">Mensaje</label>
-                    <span class="errorr_message__span message_area" role="alert">
+                    <span class="errorr_message__span" role="alert">
                         <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="10" height="10" viewBox="0,0,256,256" style="fill:#000000;">
                             <g fill="#ff0000" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(10.66667,10.66667)"><path d="M9.365,13.055l-6.365,-1.813l1.196,-3.684l6.304,2.544l-0.405,-7.102h3.973l-0.405,7.245l6.142,-2.503l1.195,3.724l-6.486,1.811l4.257,5.419l-3.224,2.304l-3.689,-5.949l-3.649,5.745l-3.223,-2.2z"></path></g></g>
                         </svg>
-                        <p class="message_error__p message_area"></p>
+                        <p class="body-medium message_error__p"></p>
                     </span>
                 </div>
 
@@ -429,7 +432,6 @@
             <p class="body-medium">Todos los estilos son propios. Diseño recuperado de Figma Comunity.</p>
         </div>
     </footer>
-
 
     <script src="./public/js/index.js" type="module"></script>
 </body>
