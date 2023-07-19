@@ -26,9 +26,9 @@ export function addEventListenerToLinks(el) {
 
 function preventRedirect(event) {
     event.preventDefault();
-    let el = event.target;
 
-    if(el.tagName !== "A") el = el.parentElement;
+    // No se puede usar .current porque ocurre el concepto de event bubbling
+    let el = event.currentTarget;
 
     const href = el.getAttribute("href");
     const offsetTop = document.querySelector(href).offsetTop;
