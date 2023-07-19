@@ -125,6 +125,7 @@
                 
                 .message_form__textarea {
                     min-height: 110px;
+                    max-height: 250px;
                     width: 100%;
                     margin-top: calc(8px + 1.5rem);;
                     padding: 0 {
@@ -186,6 +187,103 @@
                 }
             }
             
+        }
+    }
+
+    .socials__footer {
+        background-color: #000000;
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        padding: 20px 0;
+
+        .socials_item__div {
+            width: 50px;
+            height: 50px;
+            padding: 10px;
+            border-radius: 50%;
+            background-color: $brand-color;
+            box-sizing: border-box;
+
+            &.linkedin {
+                background-color: #0077b5;
+
+                &:hover {
+                    transform: translateY(-5px);
+                    box-shadow: 0px 10px 10px #0076b5af;
+                    transition: all .3s ease-in-out;
+                }
+                &:not(:hover) {
+                    transition: all .3s ease-in-out;
+                }
+            }
+
+            &.github {
+                background-color: #333333;
+            
+                &:hover {
+                    transform: translateY(-5px);
+                    box-shadow: 0px 10px 10px #e4e4e481;
+                    transition: all .3s ease-in-out;
+                }
+                &:not(:hover) {
+                    transition: all .3s ease-in-out;
+                }
+            }
+            
+            &.repository {
+                background: linear-gradient(45deg, #ec8244, #7011ec);
+
+                &:hover {
+                    transform: translateY(-5px);
+                    box-shadow: 0px 10px 10px #ec444481;
+                    transition: all .3s ease-in-out;
+                }
+                &:not(:hover) {
+                    transition: all .3s ease-in-out;
+                }
+            }
+
+            .linkedin__i {
+                display: block;
+                width: 100%;
+                height: 100%;
+                background-image: url(../assets/icons/linkedin.svg);
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: contain;
+            }
+
+            .github__i {
+                display: block;
+                width: 100%;
+                height: 100%;
+                background-image: url(../assets/icons/github.svg);
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: contain;
+            }
+
+            .repository__i {
+                display: block;
+                width: 100%;
+                height: 100%;
+                background-image: url(../assets/icons/repository.svg);
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: contain;
+            }
+            
+        }
+    }
+
+    .footer_content__div {
+        background-color: #303030;
+        text-align: center;
+        padding: 1rem 0;
+
+        &>p{
+            margin: .5rem 0;
         }
     }
 }

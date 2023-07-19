@@ -415,6 +415,7 @@ header .container_right__div.mobile .navbar .menu {
 }
 .footer_content__footer .contacto__div .form_contacto__form .container_form__area .message_form__textarea {
   min-height: 110px;
+  max-height: 250px;
   width: 100%;
   margin-top: calc(8px + 1.5rem);
   padding: 0;
@@ -465,6 +466,89 @@ header .container_right__div.mobile .navbar .menu {
   .footer_content__footer .contacto__div .form_contacto__form .form_footer_container__div > .body-medium {
     margin-top: 0.5rem;
   }
+}
+.footer_content__footer .socials__footer {
+  background-color: #000000;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px 0;
+}
+.footer_content__footer .socials__footer .socials_item__div {
+  width: 50px;
+  height: 50px;
+  padding: 10px;
+  border-radius: 50%;
+  background-color: #FF9143;
+  box-sizing: border-box;
+}
+.footer_content__footer .socials__footer .socials_item__div.linkedin {
+  background-color: #0077b5;
+}
+.footer_content__footer .socials__footer .socials_item__div.linkedin:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 10px 10px rgba(0, 118, 181, 0.6862745098);
+  transition: all 0.3s ease-in-out;
+}
+.footer_content__footer .socials__footer .socials_item__div.linkedin:not(:hover) {
+  transition: all 0.3s ease-in-out;
+}
+.footer_content__footer .socials__footer .socials_item__div.github {
+  background-color: #333333;
+}
+.footer_content__footer .socials__footer .socials_item__div.github:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 10px 10px rgba(228, 228, 228, 0.5058823529);
+  transition: all 0.3s ease-in-out;
+}
+.footer_content__footer .socials__footer .socials_item__div.github:not(:hover) {
+  transition: all 0.3s ease-in-out;
+}
+.footer_content__footer .socials__footer .socials_item__div.repository {
+  background: linear-gradient(45deg, #ec8244, #7011ec);
+}
+.footer_content__footer .socials__footer .socials_item__div.repository:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 10px 10px rgba(236, 68, 68, 0.5058823529);
+  transition: all 0.3s ease-in-out;
+}
+.footer_content__footer .socials__footer .socials_item__div.repository:not(:hover) {
+  transition: all 0.3s ease-in-out;
+}
+.footer_content__footer .socials__footer .socials_item__div .linkedin__i {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-image: url(../assets/icons/linkedin.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.footer_content__footer .socials__footer .socials_item__div .github__i {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-image: url(../assets/icons/github.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.footer_content__footer .socials__footer .socials_item__div .repository__i {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-image: url(../assets/icons/repository.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.footer_content__footer .footer_content__div {
+  background-color: #303030;
+  text-align: center;
+  padding: 1rem 0;
+}
+.footer_content__footer .footer_content__div > p {
+  margin: 0.5rem 0;
 }
 
 .errorr_message__span {
