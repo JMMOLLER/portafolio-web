@@ -316,8 +316,19 @@ header .container_right__div.mobile .navbar .menu {
   background-color: #000000;
   padding: 32px;
 }
-.footer_content__footer .contacto__div .title_contacto__h3 {
+.footer_content__footer .contacto__div .container_header_footer_contact__div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer_content__footer .contacto__div .container_header_footer_contact__div .title_footer_contact__h4 {
   margin-bottom: 8px;
+  color: #FF9142;
+  font-family: Syne, sans-serif;
+}
+.footer_content__footer .contacto__div .container_header_footer_contact__div > hr {
+  width: 30%;
+  margin: 0;
 }
 .footer_content__footer .contacto__div .text_contacto__p {
   text-align: justify;
@@ -404,10 +415,11 @@ header .container_right__div.mobile .navbar .menu {
 }
 .footer_content__footer .contacto__div .form_contacto__form .container_form__area .message_form__textarea {
   min-height: 110px;
-  max-width: 100%;
+  width: 100%;
+  margin-top: calc(8px + 1.5rem);
   padding: 0;
-  padding-top: calc(8px + 1.5rem);
   padding-left: 12px;
+  padding-right: 12px;
   font-family: Raleway, sans-serif;
   font-size: 1rem;
   caret-color: #FF9143;

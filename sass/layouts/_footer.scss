@@ -5,9 +5,23 @@
         background-color: #000000;
         padding: 32px;
 
-        .title_contacto__h3 {
-            margin-bottom: 8px;
+        .container_header_footer_contact__div {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            
+            .title_footer_contact__h4 {
+                margin-bottom: 8px;
+                color: #FF9142;
+                font-family: Syne, sans-serif;
+            }
+
+            &>hr {
+                width: 30%;
+                margin: 0;
+            }
         }
+
 
         .text_contacto__p {
             text-align: justify;
@@ -111,10 +125,11 @@
                 
                 .message_form__textarea {
                     min-height: 110px;
-                    max-width: 100%;
+                    width: 100%;
+                    margin-top: calc(8px + 1.5rem);;
                     padding: 0 {
-                        top: calc(8px + 1.5rem);
                         left: 12px;
+                        right: 12px;
                     };
                     font-family: Raleway, sans-serif;
                     font-size: 1rem;
