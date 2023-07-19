@@ -1,4 +1,4 @@
-import TypeAnimation from './typeAnimation.js';
+import TypeAnimation from './TypeAnimation.js';
 import {
     addEventListenerToLinks,
     addEventListenerToNavLinks,
