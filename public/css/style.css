@@ -448,8 +448,9 @@ header .container_right__div.mobile .navbar .menu {
   margin-left: -3px;
   margin-right: -3px;
 }
-.footer_content__footer .contacto__div .form_contacto__form .container_form__area:focus-within .message_form__textarea:focus + .label_form_input__label {
+.footer_content__footer .contacto__div .form_contacto__form .container_form__area:focus-within .message_form__textarea:focus + .label_form_area__label {
   left: -2px;
+  top: 3px !important;
 }
 .footer_content__footer .contacto__div .form_contacto__form .container_form__area:focus-within .errorr_message__span {
   bottom: -26px;

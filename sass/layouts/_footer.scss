@@ -169,8 +169,9 @@
                             right: -3px;
                         }
 
-                        &:focus + .label_form_input__label {
+                        &:focus + .label_form_area__label {
                             left: -2px;
+                            top: 3px !important;
                         }
                     }
 

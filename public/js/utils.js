@@ -7,7 +7,6 @@
  * @param {HTMLElement} ParentElement - Este parámetro debe ser un HTMLElement padre del primer parámetro.
  */
 export function addEventListenerToNavLinks(ButtonElement) {
-
     //Se tiene que usar bind para poder pasarle el contexto a la función que se va a ejecutar en el evento.
     ButtonElement.addEventListener('click', toggleOnClick.bind(null, ButtonElement, ButtonElement.parentElement));
     ButtonElement.addEventListener('focusout', toggleOnFocusOut.bind(null, ButtonElement, ButtonElement.parentElement));
