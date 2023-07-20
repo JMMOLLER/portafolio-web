@@ -236,7 +236,7 @@ header .container_right__div.mobile {
   top: 0;
   left: 0;
   padding: 0 40px;
-  -webkit-backdrop-filte: blur(7px);
+  -webkit-backdrop-filter: blur(7px);
   backdrop-filter: blur(7px);
   animation: hidden_Navbar 0.5s ease-in-out forwards;
 }
@@ -299,7 +299,7 @@ header .container_right__div.mobile .navbar .menu {
 @media screen and (max-width: 1050px) {
   header {
     backdrop-filter: unset;
-    -webkit-backdrop-filte: -moz-initial;
+    -webkit-backdrop-filter: unset;
   }
   header .container_right__div.desktop {
     display: none;
