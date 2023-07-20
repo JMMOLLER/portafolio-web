@@ -33,9 +33,13 @@
             width: 200px;
             height: 150px;
             border: $white 1px solid;
+            opacity: 0;
             transform: rotateX(90deg);
-            animation: rotate 1s ease-in-out forwards;
             gap: 10px;
+
+            &.show_animation {
+                animation: rotate 1.7s ease-in-out forwards;
+            }
 
             .image_item__div {
                 width: 100%;
@@ -97,10 +101,11 @@
 
             @keyframes rotate {
                 from {
+                    opacity: 0;
                     transform: rotateX(90deg);
                 }
-
                 to {
+                    opacity: 1;
                     transform: rotateX(0deg);
                 }
             }

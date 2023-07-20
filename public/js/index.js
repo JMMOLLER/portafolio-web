@@ -18,3 +18,70 @@ addEventListenerToNavLinks(document.querySelector(".toggle.navbar__burger"));
 addEventListenerToLinks(document.querySelectorAll(".id__link"));
 
 addEventListenerToInputs(document.querySelectorAll(".form_contacto__form input, .form_contacto__form textarea"));
+
+
+const sections_animated = {
+    about_me: {
+        animated: false,
+        elements: Array.from(document.querySelectorAll("#about_me .content_left__div, #about_me .profile__img")),
+    },
+    training: {
+        animated: false,
+        elements: Array.from(document.querySelectorAll("#training .training_item__div")),
+    },
+    skills: {
+        animated: false,
+        elements: Array.from(document.querySelectorAll("#skills .skill_item_container__div")),
+    },
+    encriptador: {
+        animated: false,
+        elements: Array.from(document.querySelectorAll("#encriptador")),
+    },
+    "tienda-tuya": {
+        animated: false,
+        elements: Array.from(document.querySelectorAll("#tienda-tuya")),
+    },
+    solym: {
+        animated: false,
+        elements: Array.from(document.querySelectorAll("#solym")),
+    },
+    "rocket-league": {
+        animated: false,
+        elements: Array.from(document.querySelectorAll("#rocket-league")),
+    }
+}
+
+window.addEventListener("scroll", handleScroll);
+
+function handleScroll() {
+    const el = Array.from(document.querySelectorAll("#about_me, #training, #skills, #encriptador, #tienda-tuya, #solym, #rocket-league"));
+
+    el.forEach((element) => {
+        if (checkIfInView(element)) {
+            if (!sections_animated[element.id].animated) {
+                sections_animated[element.id].animated = true;
+                console.log("animate", sections_animated)
+                animateSection(element);
+            }
+        }
+    });
+}
+
+function checkIfInView(el) {
+    const rect = el.getBoundingClientRect();
+    const windowHeight = (window.innerHeight || document.documentElement.clientHeight);
+    const windowWidth = (window.innerWidth || document.documentElement.clientWidth);
+
+    const vertInView = (rect.top <= windowHeight) && ((rect.top + rect.height) >= 0);
+    const horInView = (rect.left <= windowWidth) && ((rect.left + rect.width) >= 0);
+
+    return (vertInView && horInView);
+}
+
+function animateSection(el) {
+    const child = sections_animated[el.id].elements;
+    console.info(child);
+    child.forEach((element) => {
+        element.classList.add("show_animation");
+    });
+}

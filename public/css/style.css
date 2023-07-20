@@ -1,4 +1,6 @@
-/* Abstract */ /* Custom fonts */
+/* Abstract */ /* Variable */
+/* END Variables */
+/* Custom fonts */
 @font-face {
   font-family: "Syne";
   src: url("../assets/fonts/syne/Syne-SemiBold.ttf") format("truetype");
@@ -717,8 +719,38 @@ main .container_vector__div svg:first-of-type {
 }
 main .container_vector__div svg:nth-of-type(2) {
   position: absolute;
-  top: 50%;
+  top: 12%;
   left: -15%;
+  max-height: 80%;
+}
+main .container_vector__div svg:nth-of-type(3) {
+  position: absolute;
+  top: 34%;
+  right: 0%;
+  max-height: 80%;
+}
+main .container_vector__div svg:nth-of-type(4) {
+  position: absolute;
+  top: 45%;
+  left: -25%;
+  max-height: 80%;
+}
+main .container_vector__div svg:nth-of-type(5) {
+  position: absolute;
+  top: 65%;
+  right: -20%;
+  max-height: 80%;
+}
+main .container_vector__div svg:nth-of-type(6) {
+  position: absolute;
+  top: 75%;
+  left: -20%;
+  max-height: 80%;
+}
+main .container_vector__div svg:nth-of-type(7) {
+  position: absolute;
+  top: 95%;
+  right: -20%;
   max-height: 80%;
 }
 
@@ -780,6 +812,10 @@ main .container_vector__div svg:nth-of-type(2) {
   gap: 26px;
   align-items: start;
   order: 1;
+  transform: translateX(-105%);
+}
+.about__section .content_left__div.show_animation {
+  animation: fromLeft 1s 0.3s ease-in-out forwards;
 }
 .about__section .content_left__div .title_about__div {
   max-width: 80%;
@@ -802,7 +838,11 @@ main .container_vector__div svg:nth-of-type(2) {
   min-width: 220px;
   height: auto;
   border-radius: 30px;
+  opacity: 0;
   order: 0;
+}
+.about__section .profile__img.show_animation {
+  animation: showAbout 3s 0.7s ease-in-out forwards;
 }
 @media screen and (max-width: 1050px) {
   .about__section {
@@ -812,6 +852,22 @@ main .container_vector__div svg:nth-of-type(2) {
 @media screen and (max-width: 1312px) {
   .about__section .to_training__link {
     margin: auto;
+  }
+}
+@keyframes showAbout {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fromLeft {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
   }
 }
 
@@ -836,7 +892,12 @@ main .container_vector__div svg:nth-of-type(2) {
   flex-direction: column;
   padding: 0 50px;
   margin-bottom: 67px;
+  opacity: 0;
   gap: 32px;
+  transform: translate3d(-100%, 0, 0) rotate3d(0, 0, 1, -120deg);
+}
+.training__section .training_items_container__div .training_item__div.show_animation {
+  animation: show_animation 1.5s ease-in-out forwards;
 }
 .training__section .training_items_container__div .training_item__div .to_certificate__link {
   position: relative;
@@ -932,6 +993,16 @@ main .container_vector__div svg:nth-of-type(2) {
   min-height: 65px;
   border: #FF9143 1px solid;
 }
+@keyframes show_animation {
+  from {
+    opacity: 0;
+    transform: translate3d(-100%, 0, 0) rotate3d(0, 0, 1, -120deg);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
 
 .skills__section {
   display: flex;
@@ -958,9 +1029,12 @@ main .container_vector__div svg:nth-of-type(2) {
   width: 200px;
   height: 150px;
   border: #FFFFFF 1px solid;
+  opacity: 0;
   transform: rotateX(90deg);
-  animation: rotate 1s ease-in-out forwards;
   gap: 10px;
+}
+.skills__section .skills_container__div .skill_item_container__div.show_animation {
+  animation: rotate 1.7s ease-in-out forwards;
 }
 .skills__section .skills_container__div .skill_item_container__div .image_item__div {
   width: 100%;
@@ -1063,9 +1137,11 @@ main .container_vector__div svg:nth-of-type(2) {
 }
 @keyframes rotate {
   from {
+    opacity: 0;
     transform: rotateX(90deg);
   }
   to {
+    opacity: 1;
     transform: rotateX(0deg);
   }
 }
@@ -1078,6 +1154,7 @@ main .container_vector__div svg:nth-of-type(2) {
 .projects__section .projects_items_container__div {
   display: flex;
   flex-direction: column;
+  overflow: hidden;
   padding-top: 60px;
 }
 .projects__section .projects_items_container__div .projects_item__div {
@@ -1088,7 +1165,20 @@ main .container_vector__div svg:nth-of-type(2) {
   flex-direction: row;
   padding: 0 50px;
   margin-bottom: 67px;
+  opacity: 0;
   gap: 32px;
+}
+.projects__section .projects_items_container__div .projects_item__div.show_animation:first-child {
+  animation: fromLeft 1s ease-in-out forwards;
+}
+.projects__section .projects_items_container__div .projects_item__div.show_animation:nth-child(2) {
+  animation: fromRight 1s ease-in-out forwards;
+}
+.projects__section .projects_items_container__div .projects_item__div.show_animation:nth-child(3) {
+  animation: fromBottom 1s ease-in-out forwards;
+}
+.projects__section .projects_items_container__div .projects_item__div.show_animation:nth-child(4) {
+  animation: scaleAnimation 1s ease-in-out forwards;
 }
 .projects__section .projects_items_container__div .projects_item__div .container_image__div {
   width: 100%;
@@ -1097,22 +1187,34 @@ main .container_vector__div svg:nth-of-type(2) {
 .projects__section .projects_items_container__div .projects_item__div .container_image__div .screenshot__div {
   width: 100%;
   height: 100%;
-  background-position: center;
+  background-position: top;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
   margin: auto;
 }
 .projects__section .projects_items_container__div .projects_item__div .container_image__div.encriptador {
   background-color: #e0ecff;
 }
 .projects__section .projects_items_container__div .projects_item__div .container_image__div.encriptador .screenshot__div {
-  background-image: url("../assets/imgs/encriptador_texto.png");
+  background-image: url("../assets/imgs/encriptador_texto.webp");
 }
 .projects__section .projects_items_container__div .projects_item__div .container_image__div.tienda-tuya {
   background-color: #a0bbec;
 }
 .projects__section .projects_items_container__div .projects_item__div .container_image__div.tienda-tuya .screenshot__div {
-  background-image: url("../assets/imgs/tienda_tuya.png");
+  background-image: url("../assets/imgs/tienda_tuya.webp");
+}
+.projects__section .projects_items_container__div .projects_item__div .container_image__div.solym {
+  background-color: #a0bbec;
+}
+.projects__section .projects_items_container__div .projects_item__div .container_image__div.solym .screenshot__div {
+  background-image: url("../assets/imgs/solym-web.webp");
+}
+.projects__section .projects_items_container__div .projects_item__div .container_image__div.rocket-league {
+  background-color: #a0bbec;
+}
+.projects__section .projects_items_container__div .projects_item__div .container_image__div.rocket-league .screenshot__div {
+  background-image: url("../assets/imgs/rocket-league.webp");
 }
 .projects__section .projects_items_container__div .projects_item__div .footer_item__div {
   max-width: 40%;
@@ -1140,6 +1242,55 @@ main .container_vector__div svg:nth-of-type(2) {
   .projects__section .projects_items_container__div .projects_item__div .container_image__div {
     min-height: 300px;
     width: 50%;
+  }
+}
+@keyframes fromLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  70% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes fromRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  70% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes fromBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  70% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes scaleAnimation {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
   }
 }
 

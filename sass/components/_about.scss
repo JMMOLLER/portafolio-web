@@ -14,6 +14,11 @@
         gap: 26px;
         align-items: start;
         order: 1;
+        transform: translateX(-105%);
+        
+        &.show_animation {
+            animation: fromLeft 1s .3s ease-in-out forwards;
+        }
 
         .title_about__div {
             max-width: 80%;
@@ -40,7 +45,12 @@
         min-width: 220px;
         height: auto;
         border-radius: 30px;
+        opacity: 0;
         order: 0;
+
+        &.show_animation {
+            animation: showAbout 3s .7s ease-in-out forwards;
+        }
     }
 
     @media screen and (max-width: 1050px) {
@@ -49,6 +59,24 @@
     @media screen and (max-width: 1312px) {
         .to_training__link {
             margin: auto;
+        }
+    }
+
+    @keyframes showAbout {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+
+    @keyframes fromLeft {
+        from {
+            transform: translateX(-100%);
+        }
+        to {
+            transform: translateX(0);
         }
     }
 }
