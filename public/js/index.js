@@ -89,7 +89,7 @@ async function getLastVersión() {
         const response = await fetch("https://raw.githubusercontent.com/JMMOLLER/portafolio-web/main/package.json");
         if(!response.ok) throw new Error("Error al obtener la versión del proyecto");
         const data = await response.json();
-        return { version: data.version, date: data.lastUpdate };
+        return { version: data.version, lastUpdate: data.lastUpdate };
     } catch(error) {
         console.error(error);
         return null;
@@ -104,4 +104,4 @@ function setLastVersionOnDOM(info) {
 const info = await getLastVersión();
 setLastVersionOnDOM(info);
 
-console.log();
+console.log(info);

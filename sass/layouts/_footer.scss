@@ -338,7 +338,7 @@
         position: relative;
         background-color: #303030;
         text-align: center;
-        padding: 1rem 0;
+        padding: 1rem .5rem;
 
         &>p{
             margin: .5rem 0;
@@ -346,7 +346,10 @@
 
         #version_info {
             text-align: end;
-            margin-right: 1rem;
+            margin: 0 {
+                right: 1rem;
+                bottom: .2rem;
+            };
             font-size: .8rem;
             position: absolute;
             bottom: 0;
