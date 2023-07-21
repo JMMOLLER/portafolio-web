@@ -4,7 +4,7 @@
 CURRENT_VERSION=$(node -p "require('./package.json').version")
 
 # Actualizar la versión en el package.json utilizando npm version (incremento de parche)
-npm version patch --no-git-tag-version
+npm version patch
 
 # Obtener la nueva versión después de la actualización
 NEW_VERSION=$(node -p "require('./package.json').version")
