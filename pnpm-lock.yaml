@@ -1,10 +1,14 @@
 lockfileVersion: 5.4
 
 specifiers:
+  husky: ^8.0.3
   sass: ^1.63.6
 
 dependencies:
   sass: 1.63.6
+
+devDependencies:
+  husky: 8.0.3
 
 packages:
 
@@ -64,6 +68,12 @@ packages:
     dependencies:
       is-glob: 4.0.3
     dev: false
+
+  /husky/8.0.3:
+    resolution: {integrity: sha512-+dQSyqPh4x1hlO1swXBiNb2HzTDN1I2IGLQx1GrBuiqFJfoMrnZWwVmatvSiO+Iz8fBUnf+lekwNo4c2LlXItg==}
+    engines: {node: '>=14'}
+    hasBin: true
+    dev: true
 
   /immutable/4.3.0:
     resolution: {integrity: sha512-0AOCmOip+xgJwEVTQj1EfiDDOkPmuyllDuTuEX+DDXUgapLAsBIfkg3sxCYyCEA8mQqZrrxPUGjcOQ2JS3WLkg==}

@@ -1,5 +1,5 @@
 {
-  "name": "Alura-Desafio02",
+  "name": "portafolio-web",
   "version": "1.0.0",
   "description": "Portfolio website",
   "main": "index.js",
@@ -12,5 +12,8 @@
   "license": "ISC",
   "dependencies": {
     "sass": "^1.63.6"
+  },
+  "devDependencies": {
+    "husky": "^8.0.3"
   }
 }
