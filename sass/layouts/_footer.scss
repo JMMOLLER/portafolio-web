@@ -1,5 +1,4 @@
 .footer_content__footer {
-    
 
     .contacto__div {
         background-color: #000000;
@@ -336,12 +335,22 @@
     }
 
     .footer_content__div {
+        position: relative;
         background-color: #303030;
         text-align: center;
         padding: 1rem 0;
 
         &>p{
             margin: .5rem 0;
+        }
+
+        #version_info {
+            text-align: end;
+            margin-right: 1rem;
+            font-size: .8rem;
+            position: absolute;
+            bottom: 0;
+            right: 0;
         }
     }
 }

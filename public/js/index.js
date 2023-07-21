@@ -60,7 +60,6 @@ function handleScroll() {
         if (checkIfInView(element)) {
             if (!sections_animated[element.id].animated) {
                 sections_animated[element.id].animated = true;
-                console.log("animate", sections_animated)
                 animateSection(element);
             }
         }
@@ -80,8 +79,29 @@ function checkIfInView(el) {
 
 function animateSection(el) {
     const child = sections_animated[el.id].elements;
-    console.info(child);
     child.forEach((element) => {
         element.classList.add("show_animation");
     });
 }
+
+async function getLastVersión() {
+    try{
+        const response = await fetch("https://raw.githubusercontent.com/JMMOLLER/portafolio-web/main/package.json");
+        if(!response.ok) throw new Error("Error al obtener la versión del proyecto");
+        const data = await response.json();
+        return { version: data.version, date: data.lastUpdate };
+    } catch(error) {
+        console.error(error);
+        return null;
+    }
+}
+
+function setLastVersionOnDOM(info) {
+    const el = document.querySelector("#version_info");
+    el.textContent = `últ. act. ${info.lastUpdate || "??/??/????" } | v${info.version || "v?.?.?"}`;
+}
+
+const info = await getLastVersión();
+setLastVersionOnDOM(info);
+
+console.log();

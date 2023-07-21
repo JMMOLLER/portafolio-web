@@ -588,12 +588,21 @@ header .container_right__div.mobile .navbar .menu {
   background-size: contain;
 }
 .footer_content__footer .footer_content__div {
+  position: relative;
   background-color: #303030;
   text-align: center;
   padding: 1rem 0;
 }
 .footer_content__footer .footer_content__div > p {
   margin: 0.5rem 0;
+}
+.footer_content__footer .footer_content__div #version_info {
+  text-align: end;
+  margin-right: 1rem;
+  font-size: 0.8rem;
+  position: absolute;
+  bottom: 0;
+  right: 0;
 }
 
 @keyframes move_placeholder {
