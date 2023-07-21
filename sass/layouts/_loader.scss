@@ -7,18 +7,21 @@
     z-index: 1;
 
     .spinn {
+        display: block;
         position: absolute;
-        max-width: 25%;
-        height: auto;
+        width: calc(100vw / 4);
+        height: calc(100vw / 4);
         left: 50%;
         top: 50%;
     }
 
     .spinn_1 {
+        background-image: url("../assets/icons/spinn_1.svg");
         animation: fadeInAndScale 2s ease-in-out forwards;
     }
-
+    
     .spinn_2 {
+        background-image: url("../assets/icons/spinn_2.svg");
         transform: scale(0);
         animation: fadeInAndScale 2s ease-in-out forwards;
         animation-delay: 1s;

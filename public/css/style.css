@@ -719,16 +719,19 @@ button .icon.arrow_right__i {
   z-index: 1;
 }
 .loader .spinn {
+  display: block;
   position: absolute;
-  max-width: 25%;
-  height: auto;
+  width: 25vw;
+  height: 25vw;
   left: 50%;
   top: 50%;
 }
 .loader .spinn_1 {
+  background-image: url("../assets/icons/spinn_1.svg");
   animation: fadeInAndScale 2s ease-in-out forwards;
 }
 .loader .spinn_2 {
+  background-image: url("../assets/icons/spinn_2.svg");
   transform: scale(0);
   animation: fadeInAndScale 2s ease-in-out forwards;
   animation-delay: 1s;
