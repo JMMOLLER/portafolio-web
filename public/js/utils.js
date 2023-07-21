@@ -100,7 +100,7 @@ function handleKeyUp(event) {
  * Función de control de evento para eliminar el estado del label cuando un input pierde el foco y no contiene texto.
  * 
  * @param {Event} event - Objeto de evento del evento keyup.
- * @returns animateLabelOnContent(event)
+ * @returns {Function|null} animateLabelOnContent(event)
  */
 function resetEmptyInputs(event) {
     const input = event.target;
@@ -108,6 +108,7 @@ function resetEmptyInputs(event) {
         input.value = "";
         return handleKeyUp(event);
     }
+    return null;
 };
 
 /**
@@ -169,6 +170,89 @@ function addMessageErrorOnLabel(input, message) {
     span.lastElementChild.innerText = message;
 }
 
+// SCROLL ANIMATION
+
+export function handleScroll() {
+    const el = Array.from(document.querySelectorAll("#about_me, #training, #skills, #encriptador, #tienda-tuya, #solym, #rocket-league"));
+
+    el.forEach((element) => {
+        if (checkIfInView(element)) {
+            if (!ANIMATED_SECTIONS[element.id].animated) {
+                ANIMATED_SECTIONS[element.id].animated = true;
+                animateSection(element);
+            }
+        }
+    });
+}
+
+/**
+ * Función que se encarga de verificar si el elemento enviado como parámetro está en el viewport.
+ * 
+ * @param {HTMLElement} el - HTMLElement que se va a verificar si está en el viewport.
+ * @returns {boolean} Retorna true si el elemento está en el viewport, de lo contrario retorna false.
+ */
+function checkIfInView(el) {
+    const rect = el.getBoundingClientRect();
+    const windowHeight = (window.innerHeight || document.documentElement.clientHeight);
+    const windowWidth = (window.innerWidth || document.documentElement.clientWidth);
+
+    const vertInView = (rect.top <= windowHeight) && ((rect.top + rect.height) >= 0);
+    const horInView = (rect.left <= windowWidth) && ((rect.left + rect.width) >= 0);
+
+    return (vertInView && horInView);
+}
+
+/**
+ * Función que se encarga de agregar la clase show_animation a cada uno de los elementos que se encuentran dentro del HTMLCollection enviado como parámetro.
+ * 
+ * @param {Array<HTMLCollection>} el - HTMLCollection que contiene los elementos que se van a animar.
+ */
+function animateSection(el) {
+    const child = ANIMATED_SECTIONS[el.id].elements;
+    child.forEach((element) => {
+        element.classList.add("show_animation");
+    });
+}
+
+// GET LAST VERSION
+
+/**
+ * Función que se encarga de obtener la información de la última versión del proyecto y agregarla al DOM.
+ */
+export async function handleGetVersion() {
+    const info = await getLastVersion();
+    setLastVersionOnDOM(info);
+}
+
+/**
+ * Función que se encarga de obtener la información de la última versión del proyecto.
+ * 
+ * @returns {Promise<{ version: string, lastUpdate: string } | null>} Objeto que contiene la información de la última versión del proyecto.
+ */
+async function getLastVersion() {
+    try{
+        const response = await fetch("https://raw.githubusercontent.com/JMMOLLER/portafolio-web/main/package.json");
+        if(!response.ok) throw new Error("Error al obtener la versión del proyecto");
+        const data = await response.json();
+        return { version: data.version, lastUpdate: data.lastUpdate };
+    } catch(error) {
+        console.error(error);
+        return null;
+    }
+}
+
+/**
+ * Función que se encarga de agregar la información de la última versión del proyecto al DOM.
+ * 
+ * @param {Object} info - Objeto que contiene la información de la última versión del proyecto. 
+ */
+function setLastVersionOnDOM(info) {
+    const el = document.querySelector("#version_info");
+    el.textContent = `últ. act. ${info.lastUpdate || "??/??/????" } | v${info.version || "v?.?.?"}`;
+}
+
+// CONSTANTS DECLARATION
+
 /**
  * Objeto que contiene mensajes de error correspondientes a diferentes tipos de input y errores de validación.
  *
@@ -200,5 +284,36 @@ const MESSAGES_INPUT_ERRORS = {
         tooShort: "El mensaje debe tener al menos 10 caracteres.",
         tooLong: "El mensaje debe tener menos de 500 caracteres.",
         badInput: "Por favor, ingrese un valor válido."
+    }
+}
+
+const ANIMATED_SECTIONS = {
+    about_me: {
+        animated: false,
+        elements: Array.from(document.querySelectorAll("#about_me .content_left__div, #about_me .profile__img")),
+    },
+    training: {
+        animated: false,
+        elements: Array.from(document.querySelectorAll("#training .training_item__div")),
+    },
+    skills: {
+        animated: false,
+        elements: Array.from(document.querySelectorAll("#skills .skill_item_container__div")),
+    },
+    encriptador: {
+        animated: false,
+        elements: Array.from(document.querySelectorAll("#encriptador")),
+    },
+    "tienda-tuya": {
+        animated: false,
+        elements: Array.from(document.querySelectorAll("#tienda-tuya")),
+    },
+    solym: {
+        animated: false,
+        elements: Array.from(document.querySelectorAll("#solym")),
+    },
+    "rocket-league": {
+        animated: false,
+        elements: Array.from(document.querySelectorAll("#rocket-league")),
     }
 }
