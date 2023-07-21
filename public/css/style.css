@@ -885,7 +885,6 @@ main .container_vector__div svg:nth-of-type(7) {
   text-align: start;
 }
 .about__section .content_left__div .to_training__link {
-  position: sticky;
   margin-top: 50px;
   max-width: 288px;
   max-height: 59px;
