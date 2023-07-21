@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "node-sass": "node-sass --out-style expanded ./sass/main.scss ./public/css/style.css"
+    "node-sass": "node-sass --out-style expanded ./sass/main.scss ./public/css/style.css",
+    "prepare": "husky install"
   },
   "keywords": [],
   "author": "JMMOLLER",
@@ -14,6 +15,6 @@
     "sass": "^1.63.6"
   },
   "devDependencies": {
-    "husky": "^8.0.3"
+    "husky": "^8.0.0"
   }
 }

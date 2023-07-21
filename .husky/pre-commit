@@ -3,14 +3,14 @@
 # Obtener la versión actual del package.json
 CURRENT_VERSION=$(node -p "require('./package.json').version")
 
-# Actualizar la versión en el package.json utilizando npm version (incremento de parche)
-npm version patch
+# Incrementar la versión en el package.json utilizando npm version (incremento de parche)
+npx npm version patch --no-git-tag-version
 
 # Obtener la nueva versión después de la actualización
 NEW_VERSION=$(node -p "require('./package.json').version")
 
 # Verificar si la versión ha cambiado
 if [ "$CURRENT_VERSION" = "$NEW_VERSION" ]; then
-  echo "Error: The current version cannot be the same as the new version."
+  echo "Error: La versión en el package.json debe ser diferente al commit anterior."
   exit 1
 fi
