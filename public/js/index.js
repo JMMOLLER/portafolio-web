@@ -1,11 +1,16 @@
 import TypeAnimation from './TypeAnimation.js';
 import {
     handleScroll,
+    startAnimation,
     handleGetVersion,
     addEventListenerToLinks,
     addEventListenerToNavLinks,
     addEventListenerToInputs
 } from './utils.js';
+
+handleGetVersion();
+
+startAnimation(document.querySelector('.spinn_1'), document.querySelector('.spinn_2'));
 
 new TypeAnimation('#toType', {
     strings: ['Ingeniero de Software', 'Desarrollador Frontend', 'Desarrollador Backend', 'Desarrollador Fullstack'],
@@ -22,6 +27,3 @@ addEventListenerToLinks(document.querySelectorAll(".id__link"));
 addEventListenerToInputs(document.querySelectorAll(".form_contacto__form input, .form_contacto__form textarea"));
 
 window.addEventListener("scroll", handleScroll);
-
-handleGetVersion();
-

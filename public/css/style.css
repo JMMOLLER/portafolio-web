@@ -191,6 +191,7 @@ hr {
 /* END Custom typography */
 body {
   background-color: #1A1A1A;
+  overflow: hidden;
 }
 
 /* layouts */
@@ -707,6 +708,54 @@ button .icon.arrow_right__i {
   background-repeat: no-repeat;
   width: 20px;
   height: 20px;
+}
+
+.loader {
+  background-color: #1A1A1A;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  z-index: 1;
+}
+.loader .spinn {
+  position: absolute;
+  max-width: 25%;
+  height: auto;
+  left: 50%;
+  top: 50%;
+}
+.loader .spinn_1 {
+  animation: fadeInAndScale 2s ease-in-out forwards;
+}
+.loader .spinn_2 {
+  transform: scale(0);
+  animation: fadeInAndScale 2s ease-in-out forwards;
+  animation-delay: 1s;
+}
+@keyframes fadeInAndScale {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.1);
+  }
+  50% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+@keyframes fadeOutAndScale {
+  0% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.1);
+  }
 }
 
 /* components */

@@ -214,6 +214,85 @@ function animateSection(el) {
     });
 }
 
+// LOADER ANIMATION
+
+/**
+ * Función que se encarga de iniciar la animación de los spinners.
+ * 
+ * @param {HTMLElement} spinn1 - HTMLElement que contiene el primer spinner. 
+ * @param {HTMLElement} spinn2 - HTMLElement que contiene el segundo spinner.
+ */
+export function startAnimation(spinn1, spinn2) {
+    setTimeout(() => {
+        handleAnimation(spinn1, spinn2);
+    }, 2000)
+}
+
+/**
+ * Función que se encarga de manejar la animación de los spinners.
+ * 
+ * @param {HTMLElement} spinn1 - HTMLElement que contiene el primer spinner. 
+ * @param {HTMLElement} spinn2 - HTMLElement que contiene el segundo spinner.
+ */
+async function handleAnimation(spinn1, spinn2) {
+
+    if(!checkLoaderIsOnDOM()) return;
+
+    spinn1.style.animation = "fadeOutAndScale 1s ease-in-out forwards";
+    await sleep(700);
+    spinn2.style.animation = "fadeOutAndScale .5s ease-in-out forwards";
+    await sleep(1000);
+    await resetAnimations(spinn1, spinn2);
+}
+
+/**
+ * Función que se encarga de resolver una promesa después de ms milisegundos.
+ * 
+ * @param {BigInteger} ms - Tiempo en milisegundos que se va a esperar para resolver la promesa.
+ * @returns {Promise} Promesa que se resuelve después de ms milisegundos.
+ */
+async function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+/**
+ * Función que se encarga de reiniciar las animaciones de los spinners.
+ * 
+ * @param {HTMLElement} spinn1 - HTMLElement que contiene el primer spinner. 
+ * @param {HTMLElement} spinn2 - HTMLElement que contiene el segundo spinner.
+ */
+async function resetAnimations(spinn1, spinn2) {
+
+    if(!checkLoaderIsOnDOM()) return;
+
+    spinn1.style.animation = "fadeInAndScale 2s ease-in-out forwards";
+    spinn2.style.animation = "fadeInAndScale 2s ease-in-out forwards";
+    spinn2.style.animationDelay = "1s";
+    await sleep(1500);
+    handleAnimation(spinn1, spinn2);
+}
+
+/**
+ * Función que se encarga de verificar si el loader está en el DOM.
+ * 
+ * @returns {HTMLElement|null} Retorna el HTMLElement que contiene el loader, de lo contrario retorna null.
+ */
+function checkLoaderIsOnDOM() {
+    return document.querySelector(".loader");
+}
+
+/**
+ * Función que se encarga de ocultar el loader cuando el documento está listo.
+ */
+function deleteLoader() {
+    if(document.readyState === "complete") {
+        document.querySelector(".loader").remove();
+        document.body.style.overflow = "auto";
+    }else{
+        setTimeout(deleteLoader, 100);
+    }
+}
+
 // GET LAST VERSION
 
 /**
@@ -249,6 +328,7 @@ async function getLastVersion() {
 function setLastVersionOnDOM(info) {
     const el = document.querySelector("#version_info");
     el.textContent = `últ. act. ${info.lastUpdate || "??/??/????" } | v${info.version || "v?.?.?"}`;
+    deleteLoader();
 }
 
 // CONSTANTS DECLARATION
