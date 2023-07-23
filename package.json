@@ -1,7 +1,7 @@
 {
   "name": "portafolio-web",
   "version": "1.0.7",
-  "lastUpdate": "21/07/2023",
+  "lastUpdate": "23/07/2023",
   "description": "Portfolio website",
   "main": "index.js",
   "scripts": {
