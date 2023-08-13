@@ -319,11 +319,14 @@ header .container_right__div.mobile .navbar .menu {
   background-color: #000000;
   padding: 32px;
   display: flex;
-  justify-content: space-between;
-  gap: 10px;
+  justify-content: space-around;
+  align-items: center;
 }
-.footer_content__footer .contacto__div .lottiie {
-  min-width: 640px;
+.footer_content__footer .contacto__div .lottie {
+  max-width: 750px;
+}
+.footer_content__footer .contacto__div .container_right {
+  width: 50%;
 }
 .footer_content__footer .contacto__div .container_header_footer_contact__div {
   display: flex;
@@ -533,12 +536,15 @@ header .container_right__div.mobile .navbar .menu {
     margin-top: 0.5rem;
   }
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1050px) {
   .footer_content__footer .contacto__div {
     display: block;
   }
-  .footer_content__footer .contacto__div .lottiie {
+  .footer_content__footer .contacto__div .lottie {
     display: none;
+  }
+  .footer_content__footer .contacto__div .container_right {
+    width: auto;
   }
 }
 .footer_content__footer .socials__footer {

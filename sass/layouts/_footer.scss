@@ -4,11 +4,15 @@
         background-color: #000000;
         padding: 32px;
         display: flex;
-        justify-content: space-between;
-        gap: 10px;
+        justify-content: space-around;
+        align-items: center;
 
-        .lottiie {
-            min-width: 640px;
+        .lottie {
+            max-width: 750px;
+        }
+
+        .container_right {
+            width: 50%;
         }
 
         .container_header_footer_contact__div {
@@ -269,11 +273,15 @@
             
         }
 
-        @media screen and (max-width: 1024px) {
+        @media screen and (max-width: 1050px) {
             display: block;
 
-            .lottiie {
+            .lottie {
                 display: none;
+            }
+
+            .container_right {
+                width: auto;
             }
         }
     }

@@ -298,9 +298,28 @@ function deleteLoader() {
 /**
  * Función que se encarga de obtener la información de la última versión del proyecto y agregarla al DOM.
  */
-export async function handleGetVersion() {
+export async function handleInitial() {
+    handleResize();
     const info = await getLastVersion();
     setLastVersionOnDOM(info);
+}
+
+/**
+ * Función que se encarga de agregar el evento resize al objeto window.
+ * 
+ */
+function handleResize() {
+    window.addEventListener("resize", () => {
+        const currentWidth = window.innerWidth;
+        if(currentWidth < 1051) {
+            console.log("hola");
+            document.querySelector(".lottie").removeAttribute("loop");
+            document.querySelector(".lottie").removeAttribute("autoplay");
+        }else{
+            document.querySelector(".lottie").setAttribute("loop", "");
+            document.querySelector(".lottie").setAttribute("autoplay", "");
+        }
+    });
 }
 
 /**
