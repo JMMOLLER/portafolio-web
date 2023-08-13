@@ -318,6 +318,12 @@ header .container_right__div.mobile .navbar .menu {
 .footer_content__footer .contacto__div {
   background-color: #000000;
   padding: 32px;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+.footer_content__footer .contacto__div .lottiie {
+  min-width: 640px;
 }
 .footer_content__footer .contacto__div .container_header_footer_contact__div {
   display: flex;
@@ -359,6 +365,14 @@ header .container_right__div.mobile .navbar .menu {
 }
 .footer_content__footer .contacto__div .form_contacto__form .container_form__input .errorr_message__span.show_error, .footer_content__footer .contacto__div .form_contacto__form .container_form__area .errorr_message__span.show_error {
   display: flex;
+}
+.footer_content__footer .contacto__div .form_contacto__form .container_form__input .errorr_message__span.show_error > svg, .footer_content__footer .contacto__div .form_contacto__form .container_form__area .errorr_message__span.show_error > svg {
+  width: 10px;
+  height: 10px;
+  fill: #000000;
+}
+.footer_content__footer .contacto__div .form_contacto__form .container_form__input .errorr_message__span.show_error > svg > g, .footer_content__footer .contacto__div .form_contacto__form .container_form__area .errorr_message__span.show_error > svg > g {
+  mix-blend-mode: normal;
 }
 .footer_content__footer .contacto__div .form_contacto__form .container_form__input .errorr_message__span .message_error__p, .footer_content__footer .contacto__div .form_contacto__form .container_form__area .errorr_message__span .message_error__p {
   color: #ff0000;
@@ -424,6 +438,9 @@ header .container_right__div.mobile .navbar .menu {
   position: absolute;
   bottom: 50%;
   left: 0;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
   user-select: none;
   transform: translateY(50%);
 }
@@ -490,6 +507,9 @@ header .container_right__div.mobile .navbar .menu {
   position: absolute;
   top: 10px;
   left: 0;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
   user-select: none;
   transform: translateY(10px);
 }
@@ -511,6 +531,14 @@ header .container_right__div.mobile .navbar .menu {
   }
   .footer_content__footer .contacto__div .form_contacto__form .form_footer_container__div > .body-medium {
     margin-top: 0.5rem;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .footer_content__footer .contacto__div {
+    display: block;
+  }
+  .footer_content__footer .contacto__div .lottiie {
+    display: none;
   }
 }
 .footer_content__footer .socials__footer {

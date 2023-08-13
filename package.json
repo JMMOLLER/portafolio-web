@@ -1,12 +1,12 @@
 {
   "name": "portafolio-web",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "lastUpdate": "21/07/2023",
   "description": "Portfolio website",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "node-sass": "node-sass --out-style expanded ./sass/main.scss ./public/css/style.css",
+    "node-sass": "sass --watch ./sass/main.scss:./public/css/style.css",
     "prepare": "husky install"
   },
   "keywords": [],

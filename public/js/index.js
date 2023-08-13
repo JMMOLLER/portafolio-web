@@ -8,6 +8,14 @@ import {
     addEventListenerToInputs
 } from './utils.js';
 
+lottie.loadAnimation({
+    container: document.querySelector('.lottie'),
+    renderer: 'svg',
+    loop: true,
+    autoplay: true,
+    path: '../assets/video/send-email-animation.json'
+});
+
 handleGetVersion();
 
 startAnimation(document.querySelector('.spinn_1'), document.querySelector('.spinn_2'));
