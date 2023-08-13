@@ -903,7 +903,7 @@ main .container_vector__div svg:nth-of-type(7) {
   gap: 26px;
   align-items: start;
   order: 1;
-  transform: translateX(-105%);
+  transform: translateX(-150%);
 }
 .about__section .content_left__div.show_animation {
   animation: fromLeft 1s 0.3s ease-in-out forwards;
