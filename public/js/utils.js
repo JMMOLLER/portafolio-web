@@ -312,7 +312,6 @@ function handleResize() {
     window.addEventListener("resize", () => {
         const currentWidth = window.innerWidth;
         if(currentWidth < 1051) {
-            console.log("hola");
             document.querySelector(".lottie").removeAttribute("loop");
             document.querySelector(".lottie").removeAttribute("autoplay");
         }else{
